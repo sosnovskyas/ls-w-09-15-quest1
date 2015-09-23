@@ -1,23 +1,13 @@
 @import 'fonts/fira/fira.css';
 $header_font_color: #3ba8c0;
 $box_bg_color: #eff3f7;
-//
+
 html {
-//  background: #fff;
-//  min-height: 100%;
-//  font-family: sans-serif;
-//
-//  display: flex;
-//  flex-direction: column;
+
 }
 
 body {
-  display: flex;
-  flex-direction: column;
-   //sticky footer
-  min-height: 100vh;
 
-  font: 100%/1.5em 'fira_sansbook' , sans-serif ;
 }
 
 .gradline {
@@ -26,7 +16,7 @@ body {
   background: #3a7b8b; /* Старые браузеры */
   background: radial-gradient(circle at 80px 40px, #e7eff3, #3a7b8b, #e7eff3);
 }
-//
+
 //@import 'header/header';
 //@import 'menu/menu';
 //@import 'content/content';
