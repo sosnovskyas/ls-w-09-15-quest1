@@ -1,0 +1,19 @@
+{
+  "name": "ls-w-09-15-quest1",
+  "version": "1.0.0",
+  "homepage": "https://github.com/sosnovskyas/ls-w-09-15-land-flex",
+  "authors": [
+    "Sosnovsky Alexey <sosnovsky.as@gmail.com>"
+  ],
+  "license": "GPL-2.0",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize-css": "normalize.css#~3.0.3"
+  }
+}
