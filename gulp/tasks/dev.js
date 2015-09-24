@@ -6,13 +6,11 @@ gulp.task('dev', function (callback) {
         //'dev-clean',
         [
             'dev-markup',
-            'dev-compass',
             'dev-js-direct',
-            'dev-css-vendor',
             'dev-fonts'
         ],
         [
-            'dev-scss-custom',
+            'dev-compass',
             'dev-img'
         ],
         'dev-browsersync',

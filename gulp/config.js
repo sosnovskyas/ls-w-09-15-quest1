@@ -21,6 +21,17 @@ module.exports = {
             imagePath: 'img' // Used by the image-url helper
         }
     },
+    devCompass: {
+        src: src + cssFile,
+        watch: src + '/**/*.{scss}',
+        dest: dev,
+        concatFile: 'custom.css',
+        settings: {
+            indentedSyntax: true, // Enable .sass syntax!
+            imagePath: 'img' // Used by the image-url helper
+        }
+    },
+
     devCssVendor: {
         src: [
                 './bower_components/normalize-css/normalize.css'
