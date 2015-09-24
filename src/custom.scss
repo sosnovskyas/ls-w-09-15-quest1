@@ -7,9 +7,13 @@ html {
 }
 
 body {
-
+  min-width: 100%;
 }
 
+.wrapper {
+  max-width: 960px;
+  margin: 0 auto;
+}
 .gradline {
   height: 3px;
   width: 100%;
@@ -17,8 +21,8 @@ body {
   background: radial-gradient(circle at 80px 40px, #e7eff3, #3a7b8b, #e7eff3);
 }
 
-//@import 'header/header';
+@import 'header/header';
 //@import 'menu/menu';
-//@import 'content/content';
-//@import 'social/social';
+@import 'content/content';
+@import 'social/social';
 //@import 'footer/footer';

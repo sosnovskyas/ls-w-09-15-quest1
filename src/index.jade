@@ -1,13 +1,25 @@
 doctype html
-html(lang="ru")
-    head
-        title ls-w-09-15-land-flex
-        meta(charset="utf-8")
-        link(rel="stylesheet", href="vendor.css")
-        link(rel="stylesheet", href="custom.css")
-    body
+<!--[if IE 8]>
+<html lang="ru-RU" class="lt-ie9">
+<![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="ru-RU">
+<!--<![endif]-->
+head
+    title ls-w-09-15-quest1
+    meta(charset="utf-8")
+    link(rel="stylesheet", href="vendor.css")
+    link(rel="stylesheet", href="custom.css")
+
+    <!--[if IE 8]>
+
+    script(src="html5shiv.js")
+    script(src="respond.min.js")
+    <!--<![endif]-->
+body
+    .fwrapper
         include header/header
         include content/content
-        include footer/footer
-        //script(src="vendor.js")
-        //script(src="custom.js")
+    include footer/footer
+    //script(src="vendor.js")
+    //script(src="custom.js")

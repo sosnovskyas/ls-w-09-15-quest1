@@ -1,0 +1,17 @@
+.header {
+  background: $box_bg_color;
+  min-height: 115px;
+}
+.header{
+  &_logo{
+    margin-top: 40px;
+    float: left;
+    img {
+      //content: url('i/sprite/logo.png');
+    }
+  }
+  &_social{
+    margin-top: 35px;
+    float: right;
+  }
+}
