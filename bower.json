@@ -14,10 +14,10 @@
     "tests"
   ],
   "dependencies": {
-    "normalize-css": "normalize.css#~3.0.3"
-  },
-  "devDependencies": {
+    "normalize-scss": "normalize.scss#~3.0.2+normalize.3.0.2",
     "html5shiv": "~3.7.3",
     "respond": "~1.4.2"
+  },
+  "devDependencies": {
   }
 }
