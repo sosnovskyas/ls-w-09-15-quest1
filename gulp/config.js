@@ -3,15 +3,14 @@ var dev = './build/dev';
 var src = './src';
 var cssFile = '/custom.scss';
 var jsFileList = '/**/*.{js,coffee}';
-var markupFileList = '/index.jade';
-var imgFileList = '/img/**/*';
+
 
 module.exports = {
 
     devClean: {
         dest: dev
     },
-    devScssCustom: {
+    devScss: {
         src: src + cssFile,
         watch: src + '/**/*.{scss}',
         dest: dev,
@@ -59,19 +58,15 @@ module.exports = {
         concatFile: 'vendor.js',
         dest: dev
     },
-    devImg: {
-        src: src + imgFileList,
+    devImage: {
+        watch: src + '/img/**/*',
+        src: src + '/img/**/*',
         dest: dev + '/i'
     },
-    devMarkup: {
-        src: src + markupFileList,
+    devJade: {
+        watch: src + '/**/*.jade',
+        src: src + '/index.jade',
         dest: dev
-    },
-    devWatch: {
-        js: src + '/**/*.js',
-        css: src + '/**/*.scss',
-        markup: src + '/**/*.jade',
-        img: src + '/img/*'
     },
     devBrowsersync: {
         dest: dev

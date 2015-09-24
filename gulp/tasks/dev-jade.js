@@ -1,10 +1,10 @@
 var gulp = require('gulp');
-var config = require('../config').devMarkup;
+var config = require('../config').devJade;
 var jade = require('gulp-jade');
 var browserSync = require('browser-sync');
 
 
-gulp.task('dev-markup', function () {
+gulp.task('dev-jade', function () {
 
     var YOUR_LOCALS = {};
 

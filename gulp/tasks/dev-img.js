@@ -1,5 +1,5 @@
 var gulp = require('gulp');
-var config = require('../config').devImg;
+var config = require('../config').devImage;
 
 // отслеживет изменение чтоб не пересоздавать файлы которые не изменились
 var changed    = require('gulp-changed');

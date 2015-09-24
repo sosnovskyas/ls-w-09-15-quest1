@@ -5,14 +5,19 @@ gulp.task('dev', function (callback) {
     runSequence(
         //'dev-clean',
         [
-            'dev-markup',
+            'dev-jade',
             'dev-js-direct',
             'dev-compass',
             'dev-fonts',
             'dev-img'
         ],
+        [
+            'dev-watch-jade',
+            'dev-watch-compass',
+            'dev-watch-js-custom',
+            'dev-watch-img'
+        ],
         'dev-browsersync',
-        'dev-watch',
         callback);
 });
 /*
