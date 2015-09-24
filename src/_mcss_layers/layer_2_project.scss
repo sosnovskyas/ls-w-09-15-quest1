@@ -19,3 +19,14 @@ $box_bg_color: #eff3f7;
   background: #3a7b8b; /* Старые браузеры */
   background: radial-gradient(circle at 80px 40px, #e7eff3, #3a7b8b, #e7eff3);
 }
+
+.wrapper {
+  &_header {
+    margin: 0 auto;
+    width: 1200px;
+  }
+
+  &_body {
+    max-width: 960px;
+  }
+}
