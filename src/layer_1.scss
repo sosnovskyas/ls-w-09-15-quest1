@@ -1,0 +1,39 @@
+/*
+* 1_layer_base
+*/
+
+
+html {
+
+}
+
+body {
+  min-width: 100%;
+}
+
+.wrapper {
+  margin: 0 auto;
+
+  &_header {
+    max-width: 12000px;
+  }
+
+  &_body {
+    max-width: 960px;
+  }
+}
+
+.clearfix {
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+/* для IE6-7 */
+.clearfix {
+  zoom: 1;
+}
