@@ -11,7 +11,7 @@ gulp.task('dev-compass', function() {
     gulp.src(config.src)
     //    .pipe(sourcemaps.init())
         .pipe(compass({
-            css: 'build/dev',
+            css: config.dest,
             sass: 'src'
         }))
         .on('error', function(error) {
@@ -25,7 +25,7 @@ gulp.task('dev-compass', function() {
         //}))
         ////.pipe(concat(config.concatFile))
         //.pipe(sourcemaps.write('.'))
-        //.pipe(gulp.dest(config.dest))
-        //.pipe(browserSync.reload({stream:true}))
+        .pipe(gulp.dest(config.dest))
+        .pipe(browserSync.reload({stream:true}))
     ;
 });

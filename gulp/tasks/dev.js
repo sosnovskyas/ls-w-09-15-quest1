@@ -11,13 +11,13 @@ gulp.task('dev', function (callback) {
             'dev-fonts',
             'dev-img'
         ],
+        'dev-browsersync',
         [
             'dev-watch-jade',
             'dev-watch-compass',
             'dev-watch-js-custom',
             'dev-watch-img'
         ],
-        'dev-browsersync',
         callback);
 });
 /*

@@ -1,7 +1,6 @@
 //var prod = './build/prod';
 var dev = './build/dev';
 var src = './src';
-var cssFile = '/custom.scss';
 var jsFileList = '/**/*.{js,coffee}';
 
 
@@ -11,8 +10,8 @@ module.exports = {
         dest: dev
     },
     devScss: {
-        src: src + cssFile,
-        watch: src + '/**/*.{scss}',
+        src: src + '/custom.scss',
+        watch: src + '/**/*.scss',
         dest: dev,
         concatFile: 'custom.css',
         settings: {
@@ -21,14 +20,10 @@ module.exports = {
         }
     },
     devCompass: {
-        src: src + cssFile,
-        watch: src + '/**/*.{scss}',
+        src: src + '/custom.scss',
+        watch: src + '/**/*.scss',
         dest: dev,
-        concatFile: 'custom.css',
-        settings: {
-            indentedSyntax: true, // Enable .sass syntax!
-            imagePath: 'img' // Used by the image-url helper
-        }
+        concatFile: 'custom.css'
     },
 
     devCssVendor: {
