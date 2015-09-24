@@ -11,18 +11,6 @@ body {
   min-width: 100%;
 }
 
-.wrapper {
-  margin: 0 auto;
-
-  &_header {
-    max-width: 12000px;
-  }
-
-  &_body {
-    max-width: 960px;
-  }
-}
-
 .clearfix {
   &:before,
   &:after {
