@@ -5,13 +5,14 @@
 @import '../fonts/fira/fira.css';
 $header_font_color: #3ba8c0;
 $box_bg_color: #eff3f7;
+$footer_height: 80px;
 
 
 @import '../header/header';
 //@import 'menu/menu';
 @import '../content/content';
 @import '../social/social';
-//@import 'footer/footer';
+@import '../footer/footer';
 
 .gradline {
   height: 3px;
@@ -21,12 +22,32 @@ $box_bg_color: #eff3f7;
 }
 
 .wrapper {
-  &_header {
+
+  &_header,
+  &_content,
+  &_footer {
     margin: 0 auto;
-    width: 1200px;
   }
 
-  &_body {
-    max-width: 960px;
+  &_header {
+    //width: 1200px;
+    max-width: 1200px;
+    //min-width: 1200px;
   }
+
+  &_content,
+  &_footer {
+    width: 960px;
+  }
+}
+
+/*
+ STICKY FOOTER
+*/
+@import "compass/reset.scss";
+@import "compass/layout.scss";
+@include sticky-footer($footer_height, ".sticky-footer_layout", ".sticky-footer_footer", ".footer");
+
+.wrapper_sticky-footer-root {
+
 }

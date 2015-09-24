@@ -8,7 +8,8 @@ doctype html
 head
     title ls-w-09-15-quest1
     meta(charset="utf-8")
-    link(rel="stylesheet", href="vendor.css")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no")
+    //link(rel="stylesheet", href="vendor.css")
     link(rel="stylesheet", href="custom.css")
 
     <!--[if IE 8]>
@@ -17,9 +18,10 @@ head
     script(src="respond.min.js")
     <!--<![endif]-->
 body
-    .wrapper_sticky-footer-for
+    .sticky-footer_layout
         include header/header
         include content/content
+        .sticky-footer_footer
     include footer/footer
     //script(src="vendor.js")
     //script(src="custom.js")

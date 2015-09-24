@@ -1,0 +1,12 @@
+.footer {
+  background-color: $box_bg_color;
+  min-height: $footer_height;
+  &_lock {
+    float: left;
+  }
+
+  &_copyright {
+    text-align: center;
+    //margin-top: 35px;
+  }
+}

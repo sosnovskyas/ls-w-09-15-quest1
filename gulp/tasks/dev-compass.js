@@ -12,7 +12,8 @@ gulp.task('dev-compass', function() {
     //    .pipe(sourcemaps.init())
         .pipe(compass({
             css: config.dest,
-            sass: 'src'
+            sass: 'src',
+            sourcemap: true
         }))
         .on('error', function(error) {
             // Would like to catch the error here
