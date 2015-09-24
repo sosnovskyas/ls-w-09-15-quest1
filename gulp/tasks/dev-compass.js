@@ -8,21 +8,24 @@ var concat = require('gulp-concat');
 var browserSync  = require('browser-sync');
 
 gulp.task('dev-compass', function() {
-    //return gulp.src(config.src)
-    return gulp.src('./src/custom.scss')
-        //.pipe(sourcemaps.init())
+    gulp.src(config.src)
+    //    .pipe(sourcemaps.init())
         .pipe(compass({
-            //project: path.join(__dirname, 'assets'),
-            css: 'css',
-            sass: 'sass'
+            css: 'build/dev',
+            sass: 'src'
         }))
+        .on('error', function(error) {
+            // Would like to catch the error here
+            console.log(error);
+            this.emit('end');
+        })
         //.pipe(autoprefixer({
         //    browsers: ['last 5 versions'],
         //    cascade: false
         //}))
-        //.pipe(concat(config.concatFile))
+        ////.pipe(concat(config.concatFile))
         //.pipe(sourcemaps.write('.'))
-        .pipe(gulp.dest(config.dest))
+        //.pipe(gulp.dest(config.dest))
         //.pipe(browserSync.reload({stream:true}))
     ;
 });

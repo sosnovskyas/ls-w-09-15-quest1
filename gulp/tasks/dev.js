@@ -7,10 +7,8 @@ gulp.task('dev', function (callback) {
         [
             'dev-markup',
             'dev-js-direct',
-            'dev-fonts'
-        ],
-        [
             'dev-compass',
+            'dev-fonts',
             'dev-img'
         ],
         'dev-browsersync',
