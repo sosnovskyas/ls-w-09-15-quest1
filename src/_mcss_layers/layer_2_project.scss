@@ -1,6 +1,13 @@
 /*
 * 2_layer_project
 */
+//noinspection CssUnknownTarget
+@import "compass/utilities/sprites";
+//noinspection CssUnknownTarget
+@import 'sprite/*.png';
+//noinspection SassScssUnresolvedMixin
+@include all-sprite-sprites;
+
 
 @import '../fonts/fira/fira.css';
 $header_font_color: #3ba8c0;
@@ -44,10 +51,7 @@ $footer_height: 80px;
 /*
  STICKY FOOTER
 */
-@import "compass/reset.scss";
+//noinspection CssUnknownTarget
 @import "compass/layout.scss";
+//noinspection SassScssUnresolvedMixin
 @include sticky-footer($footer_height, ".sticky-footer_layout", ".sticky-footer_footer", ".footer");
-
-.wrapper_sticky-footer-root {
-
-}

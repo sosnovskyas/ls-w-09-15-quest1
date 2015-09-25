@@ -25,6 +25,12 @@ module.exports = {
         dest: dev,
         concatFile: 'custom.css'
     },
+    devSassSprites: {
+        src: src + '/sprite/*.png',
+        exportImg: 'img/_sprite.png',
+        exportCss: 'sprite/_sprite.scss',
+        dest: src
+    },
 
     devCssVendor: {
         src: [
@@ -55,7 +61,7 @@ module.exports = {
     },
     devImage: {
         watch: src + '/img/**/*',
-        src: src + '/img/**/*',
+        src: src + '/img/*',
         dest: dev + '/i'
     },
     devJade: {

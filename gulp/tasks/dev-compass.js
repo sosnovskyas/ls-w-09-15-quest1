@@ -13,6 +13,8 @@ gulp.task('dev-compass', function() {
         .pipe(compass({
             css: config.dest,
             sass: 'src',
+            image: 'src/img',
+            generated_images_path: 'build/dev/i',
             sourcemap: true
         }))
         .on('error', function(error) {
