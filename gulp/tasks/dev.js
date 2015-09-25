@@ -1,9 +1,9 @@
 var gulp = require('gulp');
 var runSequence = require('run-sequence');
 
-gulp.task('dev', function (callback) {
+gulp.task('dev', function(callback) {
     runSequence(
-        //'dev-clean',
+        'dev-clean',
         [
             'dev-jade',
             'dev-js-direct',
