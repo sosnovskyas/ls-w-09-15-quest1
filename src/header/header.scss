@@ -1,15 +1,13 @@
 .header {
   background: $box_bg_color;
-  min-height: 115px;
+  min-height: 116px;
   &_logo{
     margin-top: 40px;
+    margin-left: -1px;
     float: left;
-    img {
-      //content: url('i/sprite/logo.png');
-    }
+    @include insert_sprite(logo);
   }
   &_social{
-    margin-right: 100px;
     margin-top: 35px;
     float: right;
   }

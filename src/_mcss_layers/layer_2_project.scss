@@ -1,12 +1,26 @@
 /*
 * 2_layer_project
 */
-//noinspection CssUnknownTarget
-@import "compass/utilities/sprites";
-//noinspection CssUnknownTarget
-@import 'sprite/*.png';
-//noinspection SassScssUnresolvedMixin
-@include all-sprite-sprites;
+.bg {
+  background-image: url("i/bg.png");
+  background-attachment: local , local;
+  background-position: 6px -120px;
+}
+
+// SPRITES
+  //noinspection CssUnknownTarget
+  @import "compass/utilities/sprites";
+
+  //noinspection CssUnknownTarget
+  @import 'sprite/*.png';
+  //noinspection SassScssUnresolvedMixin
+  @include all-sprite-sprites;
+
+  @mixin insert_sprite($sprite-name){
+    height: sprite-sprite-height($sprite-name);
+    width: sprite-sprite-width($sprite-name);
+    @include sprite-sprite($sprite-name);
+  }
 
 
 @import '../fonts/fira/fira.css';
@@ -37,8 +51,8 @@ $footer_height: 80px;
   }
 
   &_header {
-    //width: 1200px;
-    max-width: 1200px;
+    width: 1200px;
+    //max-width: 1200px;
     //min-width: 1200px;
   }
 

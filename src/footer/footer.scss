@@ -1,12 +1,21 @@
+@import "compass/css3/inline-block";
+
 .footer {
   background-color: $box_bg_color;
-  min-height: $footer_height;
+  //min-height: $footer_height;
+
   &_lock {
+    margin-top: 23px;
+    margin-left: 31px;
     float: left;
+    @include insert_sprite(lock);
   }
 
   &_copyright {
-    text-align: center;
-    //margin-top: 35px;
+    @include  inline-block(center);
+    margin-left: 233px;
+    margin-top: 7px;
+    font-family: "fira_sanslight";
+    font-size: 0.8125em;
   }
 }

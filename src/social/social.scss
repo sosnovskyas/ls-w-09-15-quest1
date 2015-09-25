@@ -1,33 +1,22 @@
 .social{
   &_icon{
-    margin-right: 25px;
+    margin-right: 24px;
+    float: left;
 
     &:last-child{
       margin-right:0;
     }
     &_vk{
-      //content: url('i/sprite/vk.png');
-      &:hover {
-        //content: url('i/sprite/vk_hover.png');
-      }
+      @include insert_sprite(vk);
     }
     &_tw{
-      //content: url('i/sprite/tw.png');
-      &:hover {
-        //content: url('i/sprite/tw_hover.png');
-      }
+      @include insert_sprite(tw);
     }
     &_fb{
-      //content: url('i/sprite/facebook.png');
-      &:hover {
-        //content: url('i/sprite/facebook_hover.png');
-      }
+      @include insert_sprite(facebook);
     }
-    &_gh{
-      //content: url('i/sprite/github.png');
-      &:hover {
-        //content: url('i/sprite/github_hover.png');
-      }
+    &_gh {
+      @include insert_sprite(github);
     }
-    }
+  }
 }
