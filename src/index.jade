@@ -20,7 +20,9 @@ head
 body.bg
     .sticky-footer_layout
         include header/header
-        include content/content
+        .wrapper_middle.clearfix
+            include menu/menu
+            include content/content
         .sticky-footer_footer
     include footer/footer
     //script(src="vendor.js")

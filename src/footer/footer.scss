@@ -13,9 +13,8 @@
 
   &_copyright {
     @include  inline-block(center);
+    @include set_font("fira_sanslight", 13, #000);
     margin-left: 233px;
     margin-top: 7px;
-    font-family: "fira_sanslight";
-    font-size: 0.8125em;
   }
 }

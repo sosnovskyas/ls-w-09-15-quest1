@@ -1,0 +1,101 @@
+.sidebar{
+
+  // 250 - ширина меню
+  // 60 - отступ от меню
+  width: calc_in_procent(960, (250));
+  float: left;
+  margin-right: 60px;
+}
+
+.menu{
+  &-wrap{
+      padding: 0;
+      margin: 0;
+  }
+
+  &_item{
+    background-color: $bg-color_menu;
+
+
+    &:first-child{
+      border-radius: $border-radius_common $border-radius_common 0 0;
+    }
+    &:last-child{
+      border-radius: 0 0 $border-radius_common $border-radius_common;
+      .menu_item-link{
+        border-bottom:0;
+      }
+    }
+    .menu_item-link{
+      @include set_font("fira_sansbook", 21, #000);
+      display: block;
+      color: $font-color_menu-item__passive;
+      padding: 27px 17px 20px 17px;
+      margin: 0 10px;
+
+      border-bottom: 2px solid $bg-color_menu-item_line;
+    }
+    &.active{
+      background-color: $bg-color_menu-item__active;
+      .menu_item-link{
+        @include set_font("fira_sansbook", 23, #000);
+
+        color: $font-color_menu-item__active;
+      }
+    }
+    &:hover{
+      .menu_item-link{
+        color: $font-color_menu-item__hover;
+      }
+    }
+
+
+
+    &-link{
+      display: block;
+      text-decoration: none;
+
+    }
+    &:hover{
+      color: $font-color_menu-item__hover;
+    }
+  }
+
+
+
+
+  //&_box{
+  //  background-color: $bg-color_menu;
+  //  padding: 0;
+  //  margin: 0;
+  //  border: 3px solid;
+  //  border-radius: 3px;
+  //}
+  //&_item {
+  //  padding: 0;
+  //  margin: 0;
+  //
+  //
+  //  &-link{
+  //  border-bottom: 2px solid $bg-color_menu-item-border;
+  //    display: block;
+  //
+  //    //margin: 0 10px;
+  //    padding:  25px 0 22px 27px;
+  //
+  //
+  //    @include set_font("fira_sansbook", 23, $font-color_menu-item__passive);
+  //
+  //    text-decoration: none;
+  //
+  //
+  //    &.active {
+  //      color: $font-color_menu-item__active;
+  //      background-color: $bg-color_menu-item__active;
+  //    }
+  //    &:hover{
+  //      color: $font-color_menu-item__hover;
+  //    }
+  //  }
+  //}
+}

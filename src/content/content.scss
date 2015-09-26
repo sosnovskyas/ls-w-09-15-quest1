@@ -1,3 +1,30 @@
 .content {
-  background-color: #2ca2af;
+  // 250 - ширина меню
+  // 50 - отступ от меню
+  width: calc_in_procent(960, (960-250-60));
+  float: left;
+  margin: 0;
+  padding: 0;
+
+  &_item {
+    border-radius: 3px;
+    background: $bg-color_content_item;
+    margin: 0 0 26px 0;
+
+    &-header {
+      &-text{
+        display: inline-block;
+        padding: 22px 24px 21px 20px;
+
+        border-bottom: 3px solid $bg-color_content_item-header-border;
+        @include set_font("fira_sansbook", 27, $font-color_content-header)
+      }
+      //color: $bg-color_content_item;
+    }
+
+    &:last-child{
+      margin-bottom: 0;
+    }
+
+  }
 }
