@@ -7,6 +7,9 @@ $font_color3: #fff;
 
 $bg_color1: #eff3f7;
 $bg_color2: #3ba8c0;
+$bg_color3: #41b9d4;
+$bg_color4: #48cbe8;
+$bg_color5: #51daf8;
 
 $box_bg_color: $bg_color1;
 
@@ -26,7 +29,10 @@ $font-color_menu-item__active: $font_color3;
 $font-color_menu-item__hover: $font_color2;
 
 // contacts
-$bg-color_contacts: $bg_color1;
+$bg-color_contacts-header: $bg_color2;
+$bg-color_contacts-mail: $bg_color3;
+$bg-color_contacts-phone: $bg_color4;
+$bg-color_contacts-skype: $bg_color5;
 
 $font-color_contacts-item: $font_color3;
 

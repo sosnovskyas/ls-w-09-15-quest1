@@ -61,23 +61,52 @@
   margin: 23px 0 0 0;
   &_item {
     //background-color: $bg-color_contacts;
-    background-color: #000;
+    &-header {
+      background-color: $bg-color_contacts-header;
+    }
+    &-mail {
+      background-color: $bg-color_contacts-mail;
+      &:before{
+        margin: 11px 0 0 12px;
+        content: "";
+        float: left;
+        @include insert_sprite(mail);
+      }
+    }
+    &-phone {
+      background-color: $bg-color_contacts-phone;
+      text-decoration:underline;
+      color: #fff;
+      &:before{
+        margin: 9px 0 0 12px;
+        content: "";
+        float: left;
+        @include insert_sprite(phone);
+      }
+    }
+    &-skype {
+      background-color: $bg-color_contacts-skype;
+      &:before{
+        margin: 9px 0 0 12px;
+        content: "";
+        float: left;
+        @include insert_sprite(skype);
+      }
+    }
+
     &-link{
       display: block;
       text-decoration: none;
+      @include set_font("fira_sansbook", 17, $font-color_contacts-item);
+      padding: 8px 40px;
 
-      //padding: 14px 0 14px 80px;
-      padding: 8px 82px;
 
-      @include set_font("fira_sansbook", 17, #000); //$font-color_contacts-item);
-
-      &-header{
+      &_header{
+        @include set_font("fira_sansbook", 21, $font-color_contacts-item);
         padding: 12px 0 5px 18px;
-        @include set_font("fira_sansbook", 21, #000 $font-color_contacts-item);
-        //background-color: red;
       }
-
     }
+
     &:first-child{
       border-radius: $border-radius_common $border-radius_common 0 0;
     }
