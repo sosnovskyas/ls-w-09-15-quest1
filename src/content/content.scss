@@ -21,6 +21,21 @@
       }
       //color: $bg-color_content_item;
     }
+    &-avatar {
+      &-wrapper{
+        float: left;
+        border-radius: 50%;
+        border: 5px solid $bg-color_content_avatar-border;
+        width: 140px;
+        height: 140px;
+        overflow: hidden;
+        margin: 35px 25px 0 55px;
+      }
+      &-image{
+        width: 100%;
+        content: url('i/photo.jpeg');
+      }
+    }
 
     &:last-child{
       margin-bottom: 0;
