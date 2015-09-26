@@ -8,10 +8,8 @@
 }
 
 .menu{
-  &-wrap{
       padding: 0;
       margin: 0;
-  }
 
   &_item{
     background-color: $bg-color_menu;
@@ -23,7 +21,7 @@
     &:last-child{
       border-radius: 0 0 $border-radius_common $border-radius_common;
       .menu_item-link{
-        border-bottom:0;
+        border-color: $bg-color_menu;
       }
     }
     .menu_item-link{
@@ -60,42 +58,4 @@
       color: $font-color_menu-item__hover;
     }
   }
-
-
-
-
-  //&_box{
-  //  background-color: $bg-color_menu;
-  //  padding: 0;
-  //  margin: 0;
-  //  border: 3px solid;
-  //  border-radius: 3px;
-  //}
-  //&_item {
-  //  padding: 0;
-  //  margin: 0;
-  //
-  //
-  //  &-link{
-  //  border-bottom: 2px solid $bg-color_menu-item-border;
-  //    display: block;
-  //
-  //    //margin: 0 10px;
-  //    padding:  25px 0 22px 27px;
-  //
-  //
-  //    @include set_font("fira_sansbook", 23, $font-color_menu-item__passive);
-  //
-  //    text-decoration: none;
-  //
-  //
-  //    &.active {
-  //      color: $font-color_menu-item__active;
-  //      background-color: $bg-color_menu-item__active;
-  //    }
-  //    &:hover{
-  //      color: $font-color_menu-item__hover;
-  //    }
-  //  }
-  //}
 }
