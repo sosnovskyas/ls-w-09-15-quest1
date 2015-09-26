@@ -1,0 +1,29 @@
+@mixin insert_sprite($sprite-name){
+  height: sprite-sprite-height($sprite-name);
+  width: sprite-sprite-width($sprite-name);
+  @include sprite-sprite($sprite-name);
+}
+
+
+
+@function em($pixels, $context: $browser-context) {
+  @if (unitless($pixels)) {
+    $pixels: $pixels * 1px;
+  }
+
+  @if (unitless($context)) {
+    $context: $context * 1px;
+  }
+
+  @return $pixels / $context * 1em;
+}
+
+@mixin set_font($font, $pixel, $color) {
+  font-family: $font, sans-serif;
+  font-size: em($pixel);
+  color: $color;
+}
+
+@function calc_in_procent($common, $dest){
+  @return ($dest / $common) * 100%
+}
