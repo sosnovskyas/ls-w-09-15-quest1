@@ -1,0 +1,32 @@
+// common
+$browser-context: 16; // Default
+
+$font_color1: #3ba8c0;
+$font_color2: #959aa8;
+$font_color3: #fff;
+
+$bg_color1: #eff3f7;
+$bg_color2: #3ba8c0;
+
+$box_bg_color: $bg_color1;
+
+$header_font_color: $font_color1;
+$footer_height: 80px;
+
+$border-radius_common: 4px;
+
+// menu
+$bg-color_menu: $bg_color1;
+$bg-color_menu-item__active: $bg_color2;
+$bg-color_menu-item-border: $bg_color2;
+$bg-color_menu-item_line: $bg_color2;
+
+$font-color_menu-item__passive: $font_color1;
+$font-color_menu-item__active: $font_color3;
+$font-color_menu-item__hover: $font_color2;
+
+// content
+$bg-color_content_item: $bg_color1;
+$bg-color_content_item-header-border: $bg_color2;
+
+$font-color_content-header: $font_color1;
