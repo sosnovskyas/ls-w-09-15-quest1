@@ -82,6 +82,7 @@
         &-wraped{
           float: left;
           display: inline-block;
+          background: #2e8ca2; // для старых браузеров
           background: linear-gradient(to top, #2e8ca2 , #2e8ca2, #2e8ca2, #3ba8c0, #3ba8c0, #3ba8c0);
           border-radius: 3px;
 
@@ -97,6 +98,62 @@
       }
 
 
+    }
+
+    &__skills{
+      margin: 0;
+      padding: 0;
+      &-list{
+        list-style: none;
+      }
+      &-item{
+        margin: 0 0 0 5px;
+        padding: 0;
+
+        &:first-child{
+          margin: -24px 0 0 5px;
+        }
+        &:last-child{
+          .content_item__skills-item-content {
+            padding-bottom: 16px;
+          }
+        }
+        &-header{
+          padding-top: 8px;
+          @include set_font("fira_sansbook", 17, #000)
+        }
+        &-content{
+          margin-top: -4px;
+          padding-bottom: 6px;
+          @include set_font("fira_sanslight", 15, #000)
+        }
+
+        &-case{
+          &:before{
+            margin: 12px 31px 0 13px;
+            content: "";
+            float: left;
+            @include insert_sprite(case);
+          }
+        }
+        &-courses{
+          &:before{
+            margin: 13px 37px 0 18px;
+            content: "";
+            float: left;
+            @include insert_sprite(courses);
+          }
+        }
+        &-edu{
+          &:before{
+            margin: 12px 25px 0 10px;
+            content: "";
+            float: left;
+            @include insert_sprite(hat);
+          }
+        }
+
+      }
     }
 
     &:last-child{
