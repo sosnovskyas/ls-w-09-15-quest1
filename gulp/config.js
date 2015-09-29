@@ -66,7 +66,7 @@ module.exports = {
     },
     devJade: {
         watch: src + '/**/*.jade',
-        src: src + '/index.jade',
+        src: src + '/*.jade',
         dest: dev
     },
     devBrowsersync: {

@@ -19,11 +19,11 @@ head
     <!--<![endif]-->
 body.bg
     .sticky-footer_layout
-        include header/header
+        include ../header/header
         .wrapper_middle.clearfix
-            include sidebar/sidebar
-            include content/content
+            include ../sidebar/sidebar
+            block content
         .sticky-footer_footer
-    include footer/footer
+    include ../footer/footer
     //script(src="vendor.js")
     //script(src="custom.js")
