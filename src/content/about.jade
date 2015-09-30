@@ -2,10 +2,11 @@ section.content
     .content_item.clearfix
         .content_item-header
             .content_item-header-text Мои работы
-        ul.content_item__skills-list.clearfix
-            - for (var x = 0; x < 13; x++)
-                li.content_item__works
-                    .content_item__works.content_item__works-image-wrapper
-                        .content_item-avatar__image-wrapper
-                            img(src="i/photo.jpeg").content_item__works__image
-                    .content_item__works.content_item__works-description description
+        .content_item__works-wrapper
+            ul.content_item__works-list.clearfix
+                - for (var x = 0; x < 13; x++)
+                    li.content_item__works-item
+                        .content_item__works-item__image-wrapper
+                            img(src="i/photo.jpeg", alt="portfolio screenshot").content_item__works-item__image-content
+                        .content_item__works-item__url www.site.ru
+                        .content_item__works-item__description descriptionblah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
