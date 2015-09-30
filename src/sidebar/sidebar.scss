@@ -5,15 +5,15 @@
   width: calc_in_procent(960, (250));
   float: left;
   margin-right: 60px;
+
+  @media only screen and (max-width : 960px) {
+    display: none;
+  }
 }
 
 .menu{
   padding: 0;
-  margin: 0;
-
-  @media only screen and (max-width : 700px) {
-    display: none;
-  }
+  margin: 0 0 25px 0;
 
   &_item{
     background-color: $bg-color_menu;
@@ -61,6 +61,7 @@
       }
     }
     &:hover{
+      color: $font-color_menu-item__hover;
       .menu_item-link{
         color: $font-color_menu-item__hover;
       }
@@ -70,18 +71,16 @@
       display: block;
       text-decoration: none;
     }
-    &:hover{
-      color: $font-color_menu-item__hover;
-    }
   }
 }
 
 .contacts {
   padding: 0;
-  margin: 23px 0 0 0;
+  margin: 0;
   list-style: none;
 
-  @media only screen and (max-width : 700px) {
+  // планшет
+  @media only screen and (max-width : 960px) {
     display: none;
   }
 
@@ -100,7 +99,6 @@
     }
     &-phone {
       background-color: $bg-color_contacts-phone;
-      text-decoration:underline;
       color: #fff;
       &:before{
         margin: 9px 0 0 12px;
@@ -125,6 +123,9 @@
       @include set_font("fira_sansbook", 17, $font-color_contacts-item);
       padding: 8px 40px;
 
+      &_phone {
+        //TODO придумать подчёркивание
+      }
 
       &_header{
         @include set_font("fira_sansbook", 21, $font-color_contacts-item);
