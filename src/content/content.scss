@@ -194,6 +194,7 @@
       &-item{
         float: left;
         margin: 0 20px 0 10px;
+
         &__image-wrapper{
           border-radius: 10%;
           border: 2px solid $bg-color_content_avatar-border;
@@ -202,14 +203,17 @@
           overflow: hidden;
           margin: 0 0 5px 0;
         }
+
         &__image-content{
           width: 100%;
         }
+
         &__url{
           margin: 0 0 5px 0;
           text-align: center;
           @include set_font("fira_sanslight_italic", 13, $font-color_content-about-site)
         }
+
         &__description{
           text-align: center;
           text-overflow: ellipsis;
