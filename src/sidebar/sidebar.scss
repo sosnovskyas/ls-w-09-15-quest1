@@ -47,7 +47,7 @@
       background-color: $bg-color_menu-item__active;
       padding-bottom: +2px;
       .menu_item-link{
-        @include set_font("fira_sansbook", 23, $font-color_menu-item__active);
+        @include set_font("fira_sansbook", 21, $font-color_menu-item__active);
       }
       + .menu_item{
         .menu_item-link{
@@ -64,7 +64,7 @@
       background-color: $bg-color_menu-item__active;
       padding-bottom: +2px;
       .menu_item-link{
-        @include set_font("fira_sansbook", 23, $font-color_menu-item__active);
+        @include set_font("fira_sansbook", 21, $font-color_menu-item__active);
       }
       + .menu_item{
         .menu_item-link{
