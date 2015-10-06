@@ -1,43 +1,16 @@
 .content {
   // 250 - ширина меню
-  // 50 - отступ от меню
+  // 60 - отступ от меню
   width: calc_in_procent(960, (960-250-60));
   float: right;
   margin: 0;
   padding: 0;
 
-  // tablet
-  @media only screen and (max-width : 960px) and (min-width : 700px) {
-    float: none;
-    width: 100%;
-    max-width: 960px;
-    min-width: 700px;
-  }
-
-  // modile
-  @media only screen and (max-width : 699px) and (min-width : 320px) {
-    float: none;
-    width: 100%;
-    max-width: 699px;
-    min-width: 320px;
-  }
-
   &_item {
     border-radius: 3px;
     background: $bg-color_content_item;
     margin-bottom: 25px;
-
-    // tablet
-    @media only screen and (max-width : 960px) and (min-width : 700px) {
-      margin-left: 35px;
-      margin-right: 35px;
-    }
-
-    // moblie
-    @media only screen and (max-width : 699px) and (min-width : 320px) {
-      margin-left: 15px;
-      margin-right: 15px;
-    }
+    overflow: hidden;
 
     &-header {
       &-text{
@@ -60,12 +33,6 @@
         overflow: hidden;
         margin: 19px 23px 67px 55px;
 
-        // mobile
-        @media only screen and (max-width : 700px) {
-          float: none;
-          margin: 0 auto;
-        }
-
       }
       &__image{
         width: 100%;
@@ -75,45 +42,32 @@
     &__property {
       float: left;
 
-
+      &-wraper {
+        float: right;
+        width: 421px;
+      }
       &-box{
         float: left;
-        min-width: 360px;
         padding: 4.5px 0;
         margin: 0;
-        @media only screen and (max-width : 700px) {
-          width: 100%;
-          //padding: 0 15px;
-        }
-
-
       }
       &__header {
         float: left;
         @include set_font("fira_sansmedium", 17, #000);
-        @media only screen and (max-width : 700px) {
-          min-width: 270px;
-        }
       }
       &__value {
-        float: left;
+        float: right;
         padding-left: 18px;
         @include set_font("fira_sansbook", 15, #000);
-        max-width: 250px;
-
-        //for mobile
-        @media only screen and (max-width : 700px) {
-          min-width: 270px;
+        &-wraper{
+          float: right;
+          width: 240px;
         }
-
-        &-wraped{
-          float: left;
+        &-gradbutton{
           display: inline-block;
           background: #2e8ca2; // для старых браузеров
           background: linear-gradient(to top, #2e8ca2 , #2e8ca2, #2e8ca2, #3ba8c0, #3ba8c0, #3ba8c0);
           border-radius: 3px;
-
-          //min-width: 53px;
 
           @include set_font("proxima_nova_condensed", 14, #fff);
 
@@ -123,8 +77,6 @@
           margin: 5px 4px 2px 3px;
         }
       }
-
-
     }
 
     &__skills{
@@ -146,10 +98,22 @@
           }
         }
         &-header{
+          &.case {
+            padding-left: 70px;
+          }
+          &.edu {
+            padding-left: 77px;
+          }
           padding-top: 8px;
           @include set_font("fira_sansbook", 17, #000)
         }
         &-content{
+          &.case {
+            padding-left: 70px;
+          }
+          &.edu {
+            padding-left: 77px;
+          }
           margin-top: -4px;
           padding-bottom: 6px;
           @include set_font("fira_sanslight", 15, #000)
@@ -182,54 +146,11 @@
 
       }
     }
-    &__works{
-      &-wrapper{
-        margin: 0 0 0 10px;
-      }
-      &-list{
-        list-style: none;
-        padding: 0;
-        margin: 0;
-      }
-      &-item{
-        float: left;
-        margin: 0 20px 0 10px;
 
-        &__image-wrapper{
-          border-radius: 10%;
-          border: 2px solid $bg-color_content_avatar-border;
-          width: 179px;
-          height: 130px;
-          overflow: hidden;
-          margin: 0 0 5px 0;
-        }
-
-        &__image-content{
-          width: 100%;
-        }
-
-        &__url{
-          margin: 0 0 5px 0;
-          text-align: center;
-          @include set_font("fira_sanslight_italic", 13, $font-color_content-about-site)
-        }
-
-        &__description{
-          text-align: center;
-          text-overflow: ellipsis;
-          max-width: 180px;
-          max-height: 30px;
-
-          //white-space: nowrap; /* Отменяем перенос текста */
-          overflow: hidden; /* Обрезаем содержимое */
-          padding: 5px; /* Поля */
-
-          color: red;
-        }
-      }
-    }
     &:last-child{
       margin-bottom: 0;
     }
   }
 }
+@import "./portfolio";
+@import "./contact";

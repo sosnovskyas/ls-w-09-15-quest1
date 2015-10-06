@@ -2,7 +2,7 @@
 
 .footer {
   background-color: $box_bg_color;
-  //min-height: $footer_height;
+  min-width: 960px;
 
   &_lock {
     margin-top: 23px;

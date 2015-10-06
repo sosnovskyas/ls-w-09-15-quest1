@@ -1,0 +1,18 @@
+.content {
+  &_item {
+    &-header{
+      &__contact{
+        display: block;
+        background-color: $bg-color_content-contact-header1;
+        border-bottom: 17px solid $bg-color_content-contact-header2;
+        margin: 0 auto;
+      }
+      &-text__contact {
+        text-align: center;
+        padding: 0;
+        border: none;
+        @include set_font("fira_sansbook", 27, $font-color_content-contact-header);
+      }
+    }
+  }
+}

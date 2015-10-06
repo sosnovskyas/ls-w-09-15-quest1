@@ -6,9 +6,9 @@
   float: left;
   margin-right: 60px;
 
-  @media only screen and (max-width : 960px) {
-    display: none;
-  }
+  //@media only screen and (max-width : 960px) {
+  //  display: none;
+  //}
 }
 
 .menu{
@@ -42,6 +42,23 @@
       //margin: 0 10px;
       //border-bottom: 2px solid $bg-color_menu-item_line;
 
+    }
+    &:active{
+      background-color: $bg-color_menu-item__active;
+      padding-bottom: +2px;
+      .menu_item-link{
+        @include set_font("fira_sansbook", 23, $font-color_menu-item__active);
+      }
+      + .menu_item{
+        .menu_item-link{
+
+          border-top: 0;
+        }
+      }
+      &:last-child{
+        padding-bottom: -2px;
+
+      }
     }
     &.active{
       background-color: $bg-color_menu-item__active;
@@ -80,9 +97,9 @@
   list-style: none;
 
   // планшет
-  @media only screen and (max-width : 960px) {
-    display: none;
-  }
+  //@media only screen and (max-width : 960px) {
+  //  display: none;
+  //}
 
   &_item {
     &-header {

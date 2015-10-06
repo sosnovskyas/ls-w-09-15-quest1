@@ -1,46 +1,20 @@
-section.content
-    .content_item.clearfix
+main.content
+    section.content_item.clearfix
         .content_item-header
-            .content_item-header-text Основная информация
-        .content_item-avatar__image-wrapper
-            img(src="i/photo.jpeg", alt="photo").content_item-avatar__image
-        .content_item__property-box.clearfix
-            .content_item__property__header Меня зовут:
-            .content_item__property__value Иванов Андрей Степанович
-        .content_item__property-box.clearfix
-            .content_item__property__header Мой возраст:
-            .content_item__property__value 25 лет
-        .content_item__property-box.clearfix
-            .content_item__property__header Мой город:
-            .content_item__property__value Санкт-Петербург, Россия
-        .content_item__property-box.clearfix
-            .content_item__property__header Моя специализация:
-            .content_item__property__value FRONTEND разработчик
-        .content_item__property-box.clearfix
-            .content_item__property__header Ключевые навыки:
-            .content_item__property__value
-                .content_item__property__value-wraped html
-                .content_item__property__value-wraped css
-                .content_item__property__value-wraped javascript
-                .content_item__property__value-wraped gulp
-                .content_item__property__value-wraped git
-    .content_item.clearfix
-        .content_item-header
-            .content_item-header-text Опыт работы
-        ul.content_item__skills-list
-            li.content_item__skills-item.content_item__skills-item-case
-                .content_item__skills-item-header "ИП Боровицкий" - Продавец дисков
-                .content_item__skills-item-content Сентябрь 2005 - Август 2008
-            li.content_item__skills-item.content_item__skills-item-case
-                .content_item__skills-item-header "ООО Системы безопастности" - Системный администратор
-                .content_item__skills-item-content Июнь 2008 - Июль 2010
-    .content_item.clearfix
-        .content_item-header
-            .content_item-header-text ОБразование
-        ul.content_item__skills-list
-            li.content_item__skills-item.content_item__skills-item-edu
-                .content_item__skills-item-header Незаконченное высшее. СПБГУ ИТМО
-                .content_item__skills-item-content Октябрь 2012 - по настоящее время
-            li.content_item__skills-item.content_item__skills-item-courses
-                .content_item__skills-item-header Курсы Loftschool.ru
-                .content_item__skills-item-content Ноябрь 2014 - по настоящее время
+            .content_item-header-text Мои работы
+    section.content_item
+        .content_item-header.content_item-header__contact
+            .content_item-header-text.content_item-header-text__contact У вас интересный проект? Напишите мне
+        .content_item__property-box
+            form
+                label Имя
+                input
+                label Email
+                input
+                label Сообщение
+                textarea
+                label Введите код куазаный на картинке
+                captcha captcha
+                input(placeholder="введите код")
+                input(type="submit")
+                input(type="reset", value="Очистить")

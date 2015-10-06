@@ -10,6 +10,7 @@ $bg_color2: #3ba8c0;
 $bg_color3: #41b9d4;
 $bg_color4: #48cbe8;
 $bg_color5: #51daf8;
+$bg_color5: #67dffa;
 
 $box_bg_color: $bg_color1;
 
@@ -43,6 +44,11 @@ $bg-color_content_avatar-border: $bg_color2;
 
 $font-color_content-header: $font_color1;
 
-// content - about
+// content - portfolio
 
-$font-color_content-about-site: $font_color1;
+$font-color_content-portfolio-site: $font_color1;
+
+// content - contact
+$bg-color_content-contact-header1: $bg_color4;
+$bg-color_content-contact-header2: $bg_color5;
+$font-color_content-contact-header: #fff;

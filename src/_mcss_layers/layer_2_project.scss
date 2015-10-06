@@ -30,10 +30,13 @@
 
 .gradline {
   height: 3px;
-  width: 100%;
+  //width: 100%;
+  min-width: 960px;
   background: #3a7b8b; /* Старые браузеры */
   background: radial-gradient(circle at 80px 40px, #e7eff3, #3a7b8b, #e7eff3);
 }
+
+
 
 .wrapper {
 
@@ -43,20 +46,18 @@
     margin: 0 auto;
   }
 
-  &_header {
-    //width: 1200px;
-    max-width: 1200px;
-    //min-width: 530px;
-  }
-
+  &_header,
   &_middle,
   &_footer {
-    max-width: 960px;
+    max-width: 1200px;
+    min-width: 960px;
   }
 
   &_middle{
     margin-top: 39px;
     margin-bottom: 40px;
+    min-width: 960px;
+    max-width: 960px;
     //border: 1px solid red;
   }
 
