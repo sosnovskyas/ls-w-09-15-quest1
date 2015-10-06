@@ -8,11 +8,83 @@
         margin: 0 auto;
       }
       &-text__contact {
-        text-align: center;
-        padding: 0;
+        padding: 51px 50px 43px 59px;
+        margin: 0 auto;
         border: none;
         @include set_font("fira_sansbook", 27, $font-color_content-contact-header);
       }
     }
+    &__contact{
+      &-box{
+        margin: 48px 124px 0 124px;
+      }
+    }
+  }
+  &_form {
+    &__box{
+      float: left;
+      margin-bottom: 14px;
+      &__label{
+        display: block;
+        @include set_font("fira_sanslight", 19, $font-color_content-contact_form-label);
+
+
+      }
+      &__input{
+        width: 170px;
+        @include set_font("fira_sanslight", 13, $font-color_content-contact_form-input);
+        border: 1px solid $font-color_content-contact_form-input;
+        border-radius: 3px;
+        padding: 10px;
+        outline:none;
+
+        // placeholder color
+        &:-moz-placeholder { color: $font-color_content-contact_form-input; }
+        &::-webkit-input-placeholder { color: $font-color_content-contact_form-input; }
+
+        &_name{
+          margin-right: 17px;
+        }
+        &_comment{
+          width: 380px;
+          height: 160px;
+          display: block;
+          resize: none;
+        }
+
+      }
+      &__captcha{
+        height: 58px;
+        float: left;
+        margin-right: 18px;
+        &_input{
+          margin-top: 17px;
+        }
+      }
+      &__button{
+        @include set_font("fira_sansbook", 19, #000);
+
+        margin-top: 7px;
+        padding: 0;
+        width: 137px;
+
+        &_submit{
+          margin-right: 135px;
+          background-color: $bg_color4;
+          color: $font_color3;
+          box-shadow:  0 2px $bg-color_content-contact_shadow;
+        }
+        &_reset{
+          width: 125px;
+          background-color: #849db5;
+          border-color: #849db5;
+          color: $font_color3;
+          box-shadow:  0 2px #687b8f;
+        }
+      }
+    }
   }
 }
+
+
+

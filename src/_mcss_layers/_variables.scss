@@ -4,6 +4,7 @@ $browser-context: 16; // Default
 $font_color1: #3ba8c0;
 $font_color2: #959aa8;
 $font_color3: #fff;
+$font_color4: #48cbe8;
 
 $bg_color1: #eff3f7;
 $bg_color2: #3ba8c0;
@@ -52,3 +53,6 @@ $font-color_content-portfolio-site: $font_color1;
 $bg-color_content-contact-header1: $bg_color4;
 $bg-color_content-contact-header2: $bg_color5;
 $font-color_content-contact-header: #fff;
+$font-color_content-contact_form-input: $font_color4;
+$font-color_content-contact_form-label: $font_color2;
+$bg-color_content-contact_shadow: $bg_color2;
