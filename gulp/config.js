@@ -52,11 +52,13 @@ module.exports = {
   },
   devJsCustom: {
     src: src + jsFileList,
+    concatFile: 'custom.js',
     dest: dev
   },
   devJsVendor: {
     src: [
-      './bower_components/jquery/dist/jquery.js'
+      './bower_components/jquery/dist/jquery.js',
+      './bower_components/bPopup/jquery.bpopup.js'
     ],
     concatFile: 'vendor.js',
     dest: dev

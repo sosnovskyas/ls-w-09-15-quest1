@@ -70,3 +70,6 @@
 @import "compass/layout.scss";
 //noinspection SassScssUnresolvedMixin
 @include sticky-footer($footer_height, ".sticky-footer_layout", ".sticky-footer_footer", ".footer");
+
+@import "../login/login";
+

@@ -3,7 +3,7 @@ main.content
         .content_item-header.content_item-header__contact
             .content_item-header-text.content_item-header-text__contact У вас интересный проект? Напишите мне
         .content_item__contact-box
-            form.content_form.clearfix
+            form(action="javascript:alert(grecaptcha.getResponse(widgetId1));")#send-message.content_form.clearfix
                 .content_form__box
                     label.content_form__box__label.content_form__box__label_name Имя
                     input(placeholder="Как к Вам обращаться").content_form__box__input.content_form__box__input_name
@@ -14,9 +14,11 @@ main.content
                     label.content_form__box__label Сообщение
                     textarea(placeholder="Кратко в чём суть").content_form__box__input.content_form__box__input_comment
                 .content_form__box.clearfix
-                    label.content_form__box__label Введите код куазаный на картинке
-                    img(src="i/captcha.png", alt="captcha").content_form__box__captcha.content_form__box__input
-                    input(placeholder="введите код").content_form__box__input.content_form__box__captcha_input
+                    //label.content_form__box__label Введите код куазаный на картинке
+                    label.content_form__box__label Подтвердите что вы не бот
+                    .g-recaptcha(data-sitekey='6LeiSg4TAAAAAL6AcboXC2fTgM3quVTLWFoGtQ-U')
+                    //img(src="i/captcha.png", alt="captcha").content_form__box__captcha.content_form__box__input
+                    //input(placeholder="введите код").content_form__box__input.content_form__box__captcha_input
                 .content_form__box.clearfix
                     input(type="submit").content_form__box__input.content_form__box__button.content_form__box__button_submit
                     input(type="reset", value="Очистить").content_form__box__input.content_form__box__button.content_form__box__button_reset

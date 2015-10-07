@@ -2,6 +2,9 @@
   "name": "ls-w-09-15-quest1",
   "version": "1.0.0",
   "description": "landing with flexbox",
+  "bin" : {
+      "bower" : "./node_modules/bower/bin/bower"
+    },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -16,6 +19,7 @@
   },
   "homepage": "https://github.com/sosnovskyas/ls-w-09-15-land-flex#readme",
   "devDependencies": {
+    "bower": "^1.5.3",
     "browser-sync": "^2.9.4",
     "del": "^2.0.2",
     "gulp": "^3.9.0",

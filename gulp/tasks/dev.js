@@ -2,23 +2,25 @@ var gulp = require('gulp');
 var runSequence = require('run-sequence');
 
 gulp.task('dev', function(callback) {
-    runSequence(
-        'dev-clean',
-        [
-            'dev-jade',
-            'dev-js-direct',
-            'dev-compass',
-            'dev-fonts',
-            'dev-img'
-        ],
-        'dev-browsersync',
-        [
-            'dev-watch-jade',
-            'dev-watch-compass',
-            'dev-watch-js-custom',
-            'dev-watch-img'
-        ],
-        callback);
+  runSequence(
+      'dev-clean',
+      [
+          'dev-jade',
+          'dev-js-direct',
+          'dev-js-vendor',
+          'dev-js-custom',
+          'dev-compass',
+          'dev-fonts',
+          'dev-img'
+      ],
+      'dev-browsersync',
+      [
+          'dev-watch-jade',
+          'dev-watch-compass',
+          'dev-watch-js-custom',
+          'dev-watch-img'
+      ],
+      callback);
 });
 /*
 *  НАДО ПЕРЕНЕСТИ НАСТРОЙКУ ПОСЛЕДОВАТЕЛЬНОСТИ В КОНФИГ

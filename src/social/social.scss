@@ -8,7 +8,9 @@
     //@media only screen and (max-width : 700px) {
     //  display: none;
     //}
-
+    &-text{
+      display: none;
+    }
     &:last-child{
       margin-right:0;
     }

@@ -1,5 +1,5 @@
 {
-  "classPrefix": "_",
+  "classPrefix": "",
   "options": [
     "addTest",
     "atRule",
