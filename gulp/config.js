@@ -45,7 +45,8 @@ module.exports = {
   devJsDirect: {
     src: [
       'bower_components/html5shiv/dist/html5shiv.js',
-      'bower_components/respond/dest/respond.min.js'
+      'bower_components/respond/dest/respond.min.js',
+      'node_modules/modernizr/modernizr.js'
     ],
     dest: dev
   },
