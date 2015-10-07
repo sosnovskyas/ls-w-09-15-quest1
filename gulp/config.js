@@ -55,7 +55,9 @@ module.exports = {
     dest: dev
   },
   devJsVendor: {
-    src: [],
+    src: [
+      './bower_components/jquery/dist/jquery.js'
+    ],
     concatFile: 'vendor.js',
     dest: dev
   },
