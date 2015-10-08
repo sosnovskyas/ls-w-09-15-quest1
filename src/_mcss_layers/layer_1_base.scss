@@ -1,6 +1,16 @@
 /*
 * 1_layer_base
 */
+@import "compass";
+
+// SPRITES
+//noinspection CssUnknownTarget
+@import "compass/utilities/sprites";
+//noinspection CssUnknownTarget
+@import 'sprite/*.png';
+//noinspection SassScssUnresolvedMixin
+@include all-sprite-sprites;
+
 
 html {
 
@@ -23,4 +33,188 @@ body {
 /* для IE6-7 */
 .clearfix {
   zoom: 1;
+}
+
+.button{
+  outline: none;
+  &__normal{
+    @include border-radius(3px);
+    @include set_font("fira_sansbook", 19, #fff);
+    min-width: 137px;
+    padding: 0;
+  }
+  &__large{
+    @include set_font("fira_sansbook", 36, #fff);
+    @include border-radius(6px);
+    min-width: 141px;
+    min-height: 33px;
+  }
+  &__dark{
+    background-color: #849db5;
+    border-style: solid;
+    border-color: #849db5 #849db5 #687b8f #849db5;
+    &:active{
+      border-top-style: solid;
+      border-top-color: #687b8f;
+    }
+    &:hover{
+      border-bottom-style: solid;
+      border-bottom-color: #849db5;
+    }
+  }
+  &__light{
+    background-color: #48cbe8;
+    border-style: solid;
+    border-color: #48cbe8 #48cbe8 #3ba8c0 #48cbe8;
+    &:active{
+      border-top-style: solid;
+      border-top-color: #3ba8c0;
+    }
+    &:hover{
+      border-bottom-style: solid;
+      border-bottom-color: #48cbe8;
+    }
+  }
+}
+
+.input{
+  @include border-radius(3px);
+  border: 1px solid $font-color_content-contact_form-input;
+  outline: none;
+
+  &:-moz-placeholder { color: $font-color_content-contact_form-input; }
+  &::-webkit-input-placeholder { color: $font-color_content-contact_form-input; }
+
+  &__normal{
+    @include set_font("fira_sanslight", 13, $font-color_content-contact_form-input);
+    padding: 9px;
+    width: 170px;
+  }
+  &__large{
+    @include set_font("fira_sanslight", 17, $font-color_content-contact_form-input);
+    padding: 9px;
+    width: 403px;
+  }
+  &__error{
+    background-color: #fdd8d6;
+    border-color: #f97e76;
+    &:-moz-placeholder { color: #95b9c8; }
+    &::-webkit-input-placeholder { color: #95b9c8; }
+  }
+}
+
+.textarea{
+  @include border-radius(3px);
+  border: 1px solid $font-color_content-contact_form-input;
+  outline: none;
+  padding: 10px;
+
+  display: block;
+  resize: none;
+
+  &:-moz-placeholder { color: $font-color_content-contact_form-input; }
+  &::-webkit-input-placeholder { color: $font-color_content-contact_form-input; }
+
+  &__normal{
+    @include set_font("fira_sanslight", 13, $font-color_content-contact_form-input);
+    width: 380px;
+    height: 160px;
+
+  }
+  &__large{
+    @include set_font("fira_sanslight", 17, $font-color_content-contact_form-input);
+    padding: 9px;
+    width: 403px;
+  }
+  &__error{
+    background-color: #fdd8d6;
+    border-color: #f97e76;
+    &:-moz-placeholder { color: #95b9c8; }
+    &::-webkit-input-placeholder { color: #95b9c8; }
+  }
+}
+
+.label{
+
+}
+
+.h{
+  &1{
+    @include set_font("fira_sansbook", 27, $color_header);
+  }
+  &2{
+    @include set_font("fira_sansbook", 25, $color_header);
+  }
+  &3{
+    @include set_font("fira_sansbook", 23, $color_header);
+  }
+  &4{
+    @include set_font("fira_sansbook", 21, $color_header);
+  }
+  &5{
+    @include set_font("fira_sansbook", 19, $color_header);
+  }
+  &6{
+    @include set_font("fira_sansbook", 17, $color_header);
+  }
+}
+
+.main-menu{
+  // ul
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background-color: $color_gray3;
+  @include border-radius(3px);
+  overflow: hidden;
+
+  &_item{
+    // li
+    background-color: $bg-color_menu;
+    &.active {
+      background-color: $color_blue1;
+      .main-menu_link{
+        @include set_font("fira_sansbook", 21, $color_gray4);
+      }
+      + .main-menu_item{
+        .main-menu_link{
+
+          border-top: 0;
+        }
+      }
+      &:last-child{
+        padding-bottom: -2px;
+
+      }
+    }
+
+    &:first-child {
+      .main-menu_link {
+        border-top: 0;
+      }
+    }
+  }
+
+  &_link{
+    // a
+    display: block;
+    text-decoration: none;
+    @include set_font("fira_sansbook", 21, $color_gray2);
+    padding: 22px 17px 16px 17px;
+
+
+    // line
+    margin: 0 10px;
+    border-top: 2px solid $bg-color_menu-item_line;
+
+
+    &:hover{
+      color: $color_blue1;
+    }
+    &:active{
+      background-color: $color_blue1;
+      color: $color_gray4;
+    }
+  }
+
 }

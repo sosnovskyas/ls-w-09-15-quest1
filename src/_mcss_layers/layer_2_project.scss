@@ -7,13 +7,6 @@
   background-position: 6px -120px;
 }
 
-// SPRITES
-  //noinspection CssUnknownTarget
-  @import "compass/utilities/sprites";
-  //noinspection CssUnknownTarget
-  @import 'sprite/*.png';
-  //noinspection SassScssUnresolvedMixin
-  @include all-sprite-sprites;
 
 
 
@@ -24,6 +17,7 @@
 
 @import '../header/header';
 @import '../sidebar/sidebar';
+@import '../adress-bar/adress-bar';
 @import '../content/content';
 @import '../social/social';
 @import '../footer/footer';

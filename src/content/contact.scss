@@ -70,21 +70,19 @@
 
         &_submit{
           margin-right: 135px;
-          background-color: $bg_color4;
-          color: $font_color3;
+          background-color: $color_blue3;
+          color: $color_gray4;
           box-shadow:  0 2px $bg-color_content-contact_shadow;
         }
         &_reset{
           width: 125px;
           background-color: #849db5;
           border-color: #849db5;
-          color: $font_color3;
+          color: $color_gray4;
           box-shadow:  0 2px #687b8f;
         }
       }
     }
   }
 }
-
-
 
