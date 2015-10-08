@@ -4,7 +4,37 @@ var src = './src';
 var jsFileList = '/**/*.{js,coffee}';
 
 module.exports = {
-
+  developer: {
+    sequencePre: [
+      // need for resolve trouble with empty sequence
+      'empty'
+    ],
+    sequenceClean: [
+      'dev-clean'
+    ],
+    sequenceBuild: [
+      'dev-jade',
+      'dev-js-direct',
+      'dev-js-vendor',
+      'dev-js-custom',
+      'dev-compass',
+      'dev-fonts',
+      'dev-img'
+    ],
+    sequenceServer: [
+      'dev-browsersync'
+    ],
+    sequenceWatch: [
+      'dev-watch-jade',
+      'dev-watch-compass',
+      'dev-watch-js-custom',
+      'dev-watch-img'
+    ],
+    sequencePost: [
+      // need for resolve trouble with empty sequence
+      'empty'
+    ]
+  },
   devClean: {
     dest: dev
   },
