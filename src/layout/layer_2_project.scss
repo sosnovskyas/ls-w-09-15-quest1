@@ -16,15 +16,14 @@
 
 
 @import '../header/header';
-@import '../sidebar/sidebar';
 @import '../adress-bar/adress-bar';
-@import '../content/content';
+@import '../main-menu/main-menu';
+@import '../content/index';
 @import '../social/social';
 @import '../footer/footer';
 
 .gradline {
   height: 3px;
-  //width: 100%;
   min-width: 960px;
   background: #3a7b8b; /* Старые браузеры */
   background: radial-gradient(circle at 80px 40px, #e7eff3, #3a7b8b, #e7eff3);
@@ -57,13 +56,30 @@
 
 }
 
+.sidebar{
+
+  // 250 - ширина меню
+  // 60 - отступ от меню
+  width: calc_in_procent(960, (250));
+  float: left;
+  margin-right: 60px;
+
+  //@media only screen and (max-width : 960px) {
+  //  display: none;
+  //}
+}
+
+.menu {
+  padding: 0;
+  margin: 0 0 25px 0;
+}
+
 /*
  STICKY FOOTER
 */
 //noinspection CssUnknownTarget
-@import "compass/layout.scss";
+@import "../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/layout";
 //noinspection SassScssUnresolvedMixin
 @include sticky-footer($footer_height, ".sticky-footer_layout", ".sticky-footer_footer", ".footer");
 
 @import "../login/login";
-

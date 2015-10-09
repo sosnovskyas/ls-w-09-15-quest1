@@ -1,8 +1,4 @@
-@import "_mcss_layers/_variables";
-@import "_mcss_layers/_mixins";
-@import "_mcss_layers/layer_0_reset";
-@import "_mcss_layers/layer_1_base";
-@import "_mcss_layers/layer_2_project";
-@import "_mcss_layers/layer_3_cosmetic";
-
-
+@import "layout/layer_0_reset";
+@import "layout/layer_1_base";
+@import "layout/layer_2_project";
+@import "layout/layer_3_cosmetic";
