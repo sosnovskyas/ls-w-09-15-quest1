@@ -2,4 +2,35 @@
   display:none;
   height: 490px;
   width: 592px;
+  &-box{
+    margin: 10px  0 30px 80px;
+  }
+  &_label{
+    display: block;
+    //padding: 0;
+    //margin: 20px 0 0 0;
+    text-align: center;
+    @include set_font("fira_sanslight", 36, $color_gray2);
+    width: 425px;
+
+  }
+  &_input{
+    display: block;
+    width: 425px;
+
+
+    @include set_font("fira_sanslight", 17, $color_gray2);
+  }
+
+  &_user-name{
+    width: 425px;
+  }
+  &_user-password{
+    width: 425px;
+  }
+  &_submit{
+    margin-left: 100px;
+    margin-top: 30px;
+    width: 225px;
+  }
 }

@@ -5,7 +5,7 @@
 /*
     VARIABLES
 */
-
+//colors
 $color_blue1: #3ba8c0;
 $color_blue2: #41b9d4;
 $color_blue3: #48cbe8;
@@ -70,8 +70,8 @@ $bg-color_content-contact_shadow: $color_blue1;
 /*
     IMPORTS
 */
+//noinspection CssUnknownTarget
 @import "compass";
-
 // SPRITES
 //noinspection CssUnknownTarget
 @import "compass/utilities/sprites";
@@ -79,11 +79,20 @@ $bg-color_content-contact_shadow: $color_blue1;
 @import 'sprite/*.png';
 //noinspection SassScssUnresolvedMixin
 @include all-sprite-sprites;
+// for sticky footer
+//noinspection CssUnknownTarget
+@import "compass/layout";
+// for center alignment in footer
+//noinspection CssUnknownTarget
+@import "compass/css3";
+//noinspection CssUnknownTarget
+@import "compass/css3/inline-block";
 
 /*
     CUSTOM MIXINS
 */
 
+//noinspection CssInvalidFunction
 @mixin insert_sprite($sprite-name){
   height: sprite-sprite-height($sprite-name);
   width: sprite-sprite-width($sprite-name);
@@ -135,9 +144,7 @@ body {
   &:after {
     clear: both;
   }
-}
-/* для IE6-7 */
-.clearfix {
+  /* для IE6-7 */
   zoom: 1;
 }
 
@@ -159,8 +166,6 @@ nav {
   }
 }
 
-
-// CUSTOM CLASSES
 .button{
   outline: none;
   &__normal{
@@ -285,4 +290,23 @@ nav {
   }
 }
 
+.box{
+  background: $color_gray3;
+  @include border-radius(3px);
+  margin-bottom: 25px;
+  overflow: hidden;
+}
+
+.demo-image{
+  @include border-radius(5px);
+  border: 2px solid $bg-color_content_avatar-border;
+  width: 179px;
+  height: 125px;
+  overflow: hidden;
+  margin: 0 0 5px 0;
+  &_mask{
+    width: 100%;
+    height: 100%;
+  }
+}
 

@@ -15,7 +15,7 @@
         margin: 11px 23px 26px 10px;
 
         &__image-wrapper {
-          border-radius: 5px;
+          @include border-radius(5px);
           border: 2px solid $bg-color_content_avatar-border;
           width: 179px;
           height: 125px;
@@ -34,16 +34,68 @@
         }
 
         &__description {
+
+
           @include set_font("fira_sanslight_italic", 15, #000);
           text-align: center;
-          text-overflow: ellipsis;
-          max-width: 180px;
+          width: 180px;
+          height: 29px;
           line-height: 1.2em;
-          //white-space: nowrap; /* Отменяем перенос текста */
-          //overflow: hidden; /* Обрезаем содержимое */
-          padding: 5px; /* Поля */
+          padding: 9px;
+
+          /*
+              MULTI-LINE ellipsis
+          */
+          display: block;
+          display: -webkit-box;
+
+          overflow: hidden; /* Обрезаем содержимое */
+          text-overflow: ellipsis;
+
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
         }
       }
     }
   }
 }
+
+// EFFECT
+.demo-image {
+  position: relative;
+  overflow: hidden;
+  &_caption {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background: rgba(1, 108, 164, 0.7);
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    opacity: 0;
+    -o-transition: all 0.5s linear 0s;
+    -webkit-transition: all 0.5s linear 0s;
+    -moz-transition: all 0.5s linear 0s;
+    -o-transition: all 0.5s linear 0s;
+    transition: all 0.5s linear 0s;
+    &-link{
+        width: 65px;
+        height: 20px;
+        text-align: center;
+        display: block;
+        color: #fff;
+        @include border-radius(5px);
+        margin: 0px auto;
+        position: relative;
+        top: 50px;
+        opacity: 1;
+        border: 2px solid #fff;
+        @include set_font("fira_sansbook", 12, #fff);
+        text-decoration: none;
+    }
+  }
+  &:hover .demo-image_caption{
+    opacity: 1;
+  }
+}
+

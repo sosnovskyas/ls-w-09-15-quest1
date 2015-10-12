@@ -1,61 +1,69 @@
-.adress-bar{
+.adress-bar {
+  @extend .box;
+
   // ul
   list-style: none;
 
   padding: 0;
   margin: 0;
 
-  background-color: $color_gray3;
-  @include border-radius(3px);
-  overflow: hidden;
 
-  &_item{
+  &_item {
     // li
     overflow: auto;
     text-overflow: ellipsis;
-
-    &__header{
-      background-color: $color_blue1;
-    }
-    &__mail{
-      background-color: $bg-color_contacts-mail;
-
-      &:before{
-        margin: 11px 0 0 42px;
-        content: "";
-        float: left;
-        @include insert_sprite(mail);
-      }
-    }
-    &__phone{
-      background-color: $bg-color_contacts-phone;
-      color: #fff;
-      &:before{
-        margin: 9px 0 0 42px;
-        content: "";
-        float: left;
-        @include insert_sprite(phone);
-      }
-    }
-    &__skype{
-      background-color: $bg-color_contacts-skype;
-      &:before{
-        margin: 9px 0 0 42px;
-        content: "";
-        float: left;
-        @include insert_sprite(skype);
-      }
-    }
   }
-  &_link{
-      display: block;
-      text-decoration: none;
-      @include set_font("fira_sansbook", 17, $font-color_contacts-item);
-      padding: 8px 20px;
-      overflow: hidden;
-      text-overflow: ellipsis;
+}
+.adress-link{
+  display: block;
+  text-decoration: none;
+  @include set_font("fira_sansbook", 17, $font-color_contacts-item);
+  padding: 5px 20px 8px 20px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.adress-header{
+  @extend .adress-bar_item;
+  @include set_font("fira_sansbook", 21, $font-color_contacts-item);
+
+  line-height: .5em;
+  padding:  12px  12px  6px  0px;
+  background-color: $color_blue1;
+
+}
+.adress-mail{
+  @extend .adress-bar_item;
+
+  background-color: $bg-color_contacts-mail;
+
+  &:before{
+    margin: 11px 0 0 42px;
+    content: "";
+    float: left;
+    @include insert_sprite(mail);
   }
-  &_header{
-    @include set_font("fira_sansbook", 21, $font-color_contacts-item);
+}
+.adress-phone {
+  @extend .adress-bar_item;
+
+  background-color: $bg-color_contacts-phone;
+  color: #fff;
+  &:before {
+    margin: 9px 0 0 42px;
+    content: "";
+    float: left;
+    @include insert_sprite(phone);
+  }
+}
+.adress-skype{
+  @extend .adress-bar_item;
+
+  background-color: $bg-color_contacts-skype;
+  &:before{
+    margin: 9px 0 0 42px;
+    content: "";
+    float: left;
+    @include insert_sprite(skype);
   }
 }

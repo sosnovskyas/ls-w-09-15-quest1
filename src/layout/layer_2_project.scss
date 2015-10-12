@@ -21,6 +21,7 @@
 @import '../content/index';
 @import '../social/social';
 @import '../footer/footer';
+@import "../login/login";
 
 .gradline {
   height: 3px;
@@ -71,15 +72,9 @@
 
 .menu {
   padding: 0;
-  margin: 0 0 25px 0;
+  margin: 0 0 24px 0;
 }
 
-/*
- STICKY FOOTER
-*/
-//noinspection CssUnknownTarget
-@import "../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/layout";
-//noinspection SassScssUnresolvedMixin
+// STICKY FOOTER
 @include sticky-footer($footer_height, ".sticky-footer_layout", ".sticky-footer_footer", ".footer");
 
-@import "../login/login";

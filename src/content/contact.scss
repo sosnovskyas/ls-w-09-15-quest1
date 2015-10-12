@@ -6,9 +6,10 @@
         background-color: $bg-color_content-contact-header1;
         border-bottom: 17px solid $bg-color_content-contact-header2;
         margin: 0 auto;
+        margin-bottom: 0px;
       }
       &-text__contact {
-        padding: 51px 50px 43px 59px;
+        padding: 42px 50px 37px 59px;
         margin: 0 auto;
         border: none;
         @include set_font("fira_sansbook", 27, $font-color_content-contact-header);
@@ -16,7 +17,7 @@
     }
     &__contact{
       &-box{
-        margin: 48px 124px 0 124px;
+        margin: 40px 124px 0 124px;
       }
     }
   }
@@ -28,7 +29,9 @@
         display: block;
         @include set_font("fira_sanslight", 19, $font-color_content-contact_form-label);
 
-
+        &_name{
+          margin-right: 176px ;
+        }
       }
       &__input{
         width: 170px;
@@ -56,8 +59,10 @@
       &__captcha{
         height: 58px;
         float: left;
-        margin-right: 18px;
+        margin-right: 13px;
+        margin-bottom: 5px;
         &_input{
+          float: left;
           margin-top: 17px;
         }
       }
@@ -86,3 +91,11 @@
   }
 }
 
+.clear-button{
+  margin-left: 119px;
+}
+
+.message_label{
+  margin-top: -5px;
+  margin-bottom: 0;
+}

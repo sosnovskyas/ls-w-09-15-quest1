@@ -1,15 +1,10 @@
 .login
-    .content_item
+    .box
         .content_item-header.content_item-header__contact
             .content_item-header-text.content_item-header-text__contact Авторизуйтесь
-        .content_item__contact-box
-            .content_form.clearfix
-                .content_form__box
-                    label.content_form__box__label.content_form__box__label_name Логин
-                    input(placeholder="Введите логин", type="text").input.input__normal
-                    //input(placeholder="Введите логин").content_form__box__input.content_form__box__input_name
-                    label.content_form__box__label.content_form__box__label_name Пароль
-                    input(placeholder="Введите логин", type="password").input.input__normal
-                    //input(placeholder="Введите пароль", type="password").content_form__box__input.content_form__box__input_name
-                .content_form__box.clearfix
-                    input(type="submit").button.button__light.button__normal
+        .login-box
+            label.login_label Логин
+            input(placeholder="Введите логин", type="text").input.input__normal.login_input.login_user-name
+            label.login_label Пароль
+            input(placeholder="Введите логин", type="password").input.input__normal.login_input.login_user-password
+            input(type="submit", value="Войти").button.button__light.button__large.login_submit
