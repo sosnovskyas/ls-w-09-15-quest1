@@ -1,17 +1,18 @@
 main.content
-    section.box.clearfix
-        .content_item-header
-            .content_item-header-text Мои работы
-        .content_item__portfolio-wrapper
-            ul.content_item__portfolio-list.clearfix
-                - for (var x = 0; x < 4; x++)
-                    li.content_item__portfolio-item
-                        .demo-image
-                            img(src="i/photo.jpeg", alt="portfolio screenshot").content_item__portfolio-item__image-content
-                            .demo-image_caption
-                                a(href="#").demo-image_caption-link name
-                        .content_item__portfolio-item__url www.site.ru
-                        .content_item__portfolio-item__description.multiline-ellipsis 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24
-                li.content_item__portfolio-item
-                    .content_item__portfolio-item__image
-                        img(src="i/add-protfolio.png", alt="add portfolio").content_item__portfolio-item__image-content
+  section.box.clearfix
+    .content_item-header
+      .content_item-header-text Мои работы
+    .content_item__portfolio-wrapper
+      ul.content_item__portfolio-list.clearfix
+        - for (var x = 0; x < 4; x++)
+          li.content_item__portfolio-item
+            .demo-image
+              img(src="i/photo.jpeg", alt="portfolio screenshot").content_item__portfolio-item__image-content
+              .demo-image_caption
+                  a(href="#").demo-image_caption-link name
+            .content_item__portfolio-item__url www.site.ru
+            .content_item__portfolio-item__description.multiline-ellipsis 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24
+        li.content_item__portfolio-item
+          .content_item__portfolio-item__image
+            a(href="#")
+              img(src="i/add-protfolio.png", alt="add portfolio").content_item__portfolio-item__image-content
