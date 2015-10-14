@@ -234,6 +234,45 @@ nav {
   }
 }
 
+.file-upload{
+  @extend .input;
+
+  display: block;
+  //position: relative;
+  //overflow: hidden;
+  //font-size: 1em;              /* example */
+  //height: 2em;                 /* example */
+  //line-height: 2em;             /* the same as height */
+
+  .button {
+
+    //display: block;
+    cursor: pointer;              /* example */
+    float: right;
+    //box-sizing: border-box;
+    //-moz-box-sizing: border-box;
+    //width: 8em;                  /* example */
+    //height: 100%;
+    //text-align: center;           /* example */
+    content: url('/i/upload-image.png');
+    //cursor: pointer;
+  }
+
+  .button > mark {
+
+    //background: transparent;     /* example */
+    //padding-left: 1em;            /* example */
+    //display: block;
+    //cursor: pointer;
+  }
+
+  input[type=file] {
+    position: absolute;
+    top: 0;
+    opacity: 0
+  }
+}
+
 .textarea{
   @include border-radius(3px);
   border: 1px solid $font-color_content-contact_form-input;
@@ -266,7 +305,7 @@ nav {
 }
 
 .label{
-
+  @include set_font("fira_sansbook", 17, $color_gray2);
 }
 
 .h{
@@ -295,6 +334,18 @@ nav {
   @include border-radius(3px);
   margin-bottom: 25px;
   overflow: hidden;
+
+  &_header1{
+    display: block;
+    background-color: $bg-color_content-contact-header1;
+    border-bottom: 17px solid $bg-color_content-contact-header2;
+    margin: 0 auto;
+    margin-bottom: 0px;
+    &-text{
+      border: none;
+      @include set_font("fira_sansbook", 27, $font-color_content-contact-header);
+    }
+  }
 }
 
 .demo-image{

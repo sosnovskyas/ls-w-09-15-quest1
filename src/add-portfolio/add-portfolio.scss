@@ -1,0 +1,46 @@
+.add-portfolio_form{
+  display: none;
+  //margin: 0 auto;
+  &-box{
+    padding: 5px 30px 15px 30px;
+
+    .input,
+    .textarea{
+      width: 320px;
+    }
+  }
+  &-header{
+    padding: 0 0 0 10px;
+    border-bottom-width: 10px;
+  }
+  &-close{
+    float: right;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #fff;
+    @include border-radius(50%);
+    text-align: center;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    margin: 10px 10px 0 0;
+    a{
+      display: block;
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+  &-submit{
+    margin: 20px 0 10px 100px;
+    //margin: 0 auto;
+  }
+  &-upload{
+    min-width: 338px;
+    margin: 0;
+  }
+  .label{
+    display: block;
+  }
+}

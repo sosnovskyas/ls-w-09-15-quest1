@@ -2,6 +2,7 @@
 * 2_layer_project
 */
 .bg {
+  //noinspection CssUnknownTarget
   background-image: url("i/bg.png");
   background-attachment: local , local;
   background-position: 6px -120px;
@@ -17,6 +18,7 @@
 
 @import '../header/header';
 @import '../adress-bar/adress-bar';
+@import '../add-portfolio/add-portfolio';
 @import '../main-menu/main-menu';
 @import '../content/index';
 @import '../social/social';
