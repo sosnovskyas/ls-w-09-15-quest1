@@ -39,6 +39,12 @@
   &-upload{
     min-width: 338px;
     margin: 0;
+    background-color: #fff;
+    .upload-label{
+      @include set_font("fira_sanslight", 13, $font-color_content-contact_form-input);
+
+      margin: 10px 0 0 10px;
+    }
   }
   .label{
     display: block;

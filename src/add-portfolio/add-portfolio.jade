@@ -8,8 +8,8 @@
     label.label Картинка проекта
     label.file-upload.box.add-portfolio_form-upload
       span.button Выбрать
-      mark#fileformlabel.upload-label Загрузите изображение
-      input(type="file", placeholder="Загрузите изображение", onchange="getName(this.value);").input.input__normal
+      #fileformlabel.upload-label Загрузите изображение
+      input(type="file", name="upload" placeholder="Загрузите изображение", onchange="getName(this.value);")#upload.input.input__normal
     label.label URL проекта
     input(type="text", placeholder="Добавьте ссылку").input.input__normal
     label.label Описание
