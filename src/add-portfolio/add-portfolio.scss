@@ -50,3 +50,42 @@
     display: block;
   }
 }
+
+.file-upload{
+  @extend .input;
+
+  display: block;
+  //position: relative;
+  //overflow: hidden;
+  //font-size: 1em;              /* example */
+  //height: 2em;                 /* example */
+  //line-height: 2em;             /* the same as height */
+
+  .button {
+
+    //display: block;
+    cursor: pointer;              /* example */
+    float: right;
+    //box-sizing: border-box;
+    //-moz-box-sizing: border-box;
+    //width: 8em;                  /* example */
+    //height: 100%;
+    //text-align: center;           /* example */
+    content: url('/i/upload-image.png');
+    //cursor: pointer;
+  }
+
+  .button > mark {
+
+    //background: transparent;     /* example */
+    //padding-left: 1em;            /* example */
+    //display: block;
+    //cursor: pointer;
+  }
+
+  input[type=file] {
+    position: absolute;
+    top: -1000px;
+    opacity: 0
+  }
+}

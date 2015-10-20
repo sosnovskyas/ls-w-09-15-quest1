@@ -4,15 +4,16 @@
 
   &_lock {
     margin-top: 23px;
-    margin-left: 31px;
+    margin-left: 151px;
     float: left;
     @include insert_sprite(lock);
   }
 
   &_copyright {
-    @include  inline-block(center);
+    //@include  inline-block(center);
+    float: left;
     @include set_font("fira_sanslight", 13, #000);
     margin-left: 233px;
-    margin-top: 7px;
+    margin-top: 15px;
   }
 }

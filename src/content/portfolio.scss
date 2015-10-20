@@ -10,9 +10,12 @@
         margin: 0;
       }
       &-item {
-        float: left;
+        //float: left;
+        display: inline-block;
+        vertical-align: top;
+
         width: 180px;
-        margin: 11px 23px 26px 10px;
+        margin: 11px 19px 4px 10px;
 
         &__image-wrapper {
           @include border-radius(5px);
@@ -30,6 +33,12 @@
         &__url {
           margin: 0;
           text-align: center;
+
+          overflow: hidden;
+          text-overflow: ellipsis;
+
+          text-decoration: none;
+
           @include set_font("fira_sanslight_italic", 13, $font-color_content-portfolio-site);
         }
 
@@ -39,21 +48,21 @@
           @include set_font("fira_sanslight_italic", 15, #000);
           text-align: center;
           width: 180px;
-          height: 29px;
+          //height: 29px;
           line-height: 1.2em;
           padding: 9px;
 
           /*
               MULTI-LINE ellipsis
           */
-          display: block;
-          display: -webkit-box;
-
-          overflow: hidden; /* Обрезаем содержимое */
-          text-overflow: ellipsis;
-
-          -webkit-line-clamp: 2;
-          -webkit-box-orient: vertical;
+          //display: block;
+          //display: -webkit-box;
+          //
+          //overflow: hidden; /* Обрезаем содержимое */
+          //text-overflow: ellipsis;
+          //
+          //-webkit-line-clamp: 2;
+          //-webkit-box-orient: vertical;
         }
       }
     }
@@ -62,8 +71,38 @@
 
 // EFFECT
 .demo-image {
+  @include border-radius(5px);
+  border: 2px solid $bg-color_content_avatar-border;
+  width: 179px;
+  height: 125px;
+  margin: 0 0 5px 0;
+
   position: relative;
   overflow: hidden;
+
+  &_add{
+    @include border-radius(5px);
+    border: dashed 1px $font-color_content-portfolio-site;
+
+    background-color: #edf8fc;
+    
+    height: 125px;
+    &-img{
+      height: 32px;
+      width: 32px;
+      margin: 33px 0 12px 75px;
+      background-image: url('i/add.png');
+    }
+    &-caption{
+      text-align: center;
+      @include set_font("fira_sanslight_boild", 12, $font-color_content-portfolio-site);
+
+    }
+  }
+  &_mask{
+    width: 100%;
+    height: 100%;
+  }
   &_caption {
     position: absolute;
     top: 0px;
@@ -98,4 +137,3 @@
     opacity: 1;
   }
 }
-
