@@ -16,10 +16,11 @@
   "dependencies": {
     "normalize-scss": "~3.0.2",
     "html5shiv": "~3.7.3",
-    "respond": "~1.4.2"
+    "respond": "~1.4.2",
+    "jquery-placeholder": "~2.1.3"
   },
   "devDependencies": {
-    "jquery": "~2.1.4",
+    "jquery": "~1",
     "bPopup": "bpopup#~0.11.0"
   }
 }

@@ -74,8 +74,8 @@ module.exports = {
   },
   devJsDirect: {
     src: [
-      'bower_components/html5shiv/dist/html5shiv.js',
-      'bower_components/respond/dest/respond.min.js',
+      //'bower_components/html5shiv/dist/html5shiv.js',
+      //'bower_components/respond/dest/respond.min.js',
       'node_modules/modernizr/modernizr.js'
     ],
     dest: dev
@@ -88,6 +88,7 @@ module.exports = {
   devJsVendor: {
     src: [
       './bower_components/jquery/dist/jquery.js',
+      './bower_components/jquery-placeholder/jquery.placeholder.js',
       './bower_components/bPopup/jquery.bpopup.js'
     ],
     concatFile: 'vendor.js',
