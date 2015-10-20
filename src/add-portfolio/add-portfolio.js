@@ -26,3 +26,5 @@ function getName(str) {
   var uploaded = document.getElementById('fileformlabel');
   uploaded.innerHTML = filename;
 }
+
+jQuery('input[placeholder], textarea[placeholder]').placeholder();
