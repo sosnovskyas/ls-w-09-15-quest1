@@ -32,27 +32,14 @@ head
   // favicon
   link(rel="shortcut icon", href="/i/favicon.ico", type="image/x-icon")
   link(rel="icon", href="/i/favicon.ico", type="image/x-icon")
-  script(src='https://www.google.com/recaptcha/api.js')
-  script(type='text/javascript').
-    var verifyCallback = function (response) {
-      alert(response);
-    };
-    var widgetId1;
-    var onloadCallback = function () {
-      // Renders the HTML element with id 'example1' as a reCAPTCHA widget.
-      // The id of the reCAPTCHA widget is assigned to 'widgetId1'.
-      widgetId1 = grecaptcha.render('send-message', {
-          'sitekey': '6LeiSg4TAAAAAL6AcboXC2fTgM3quVTLWFoGtQ-U'
-      });
-    };
 body.bg
   .sticky-footer_layout
-    include ../header/header
+    include ../blocks/header/header
     .wrapper_middle.clearfix
       block sidebar
       block content
     .sticky-footer_footer
-  include ../footer/footer
-  include ../login/login
+  include ../blocks/footer/footer
+  include ../blocks/login/login
   script(src="vendor.js")
   script(src="custom.js")

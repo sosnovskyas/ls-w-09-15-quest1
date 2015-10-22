@@ -19,7 +19,7 @@ module.exports = {
       'dev-js-custom',
       'dev-compass',
       'dev-fonts',
-      'dev-img'
+      'dev-images'
     ],
     sequenceServer: [
       'dev-browsersync'
@@ -28,7 +28,7 @@ module.exports = {
       'dev-watch-jade',
       'dev-watch-compass',
       'dev-watch-js-custom',
-      'dev-watch-img'
+      'dev-watch-images'
     ],
     sequencePost: [
       // need for resolve trouble with empty sequence
@@ -39,7 +39,7 @@ module.exports = {
     dest: dev
   },
   devScss: {
-    src: src + '/custom.scss',
+    src: src + '/templates/custom.scss',
     watch: src + '/**/*.scss',
     dest: dev,
     concatFile: 'custom.css',
@@ -49,14 +49,18 @@ module.exports = {
     }
   },
   devCompass: {
-    src: src + '/custom.scss',
+    src: src + '/templates/custom.scss',
+    sass: 'src/templates',
+    image: 'src/images',
+    generated_images_path: 'build/dev/i',
+    sourcemap: true,
     watch: src + '/**/*.scss',
     dest: dev,
     concatFile: 'custom.css'
   },
   devSassSprites: {
     src: src + '/sprite/*.png',
-    exportImg: 'img/_sprite.png',
+    exportImg: 'images/_sprite.png',
     exportCss: 'sprite/_sprite.scss',
     dest: src
   },
@@ -74,9 +78,7 @@ module.exports = {
   },
   devJsDirect: {
     src: [
-      //'bower_components/html5shiv/dist/html5shiv.js',
-      //'bower_components/respond/dest/respond.min.js',
-      'node_modules/modernizr/modernizr.js'
+      './node_modules/modernizr/modernizr.js'
     ],
     dest: dev
   },
@@ -95,16 +97,16 @@ module.exports = {
     dest: dev
   },
   devImage: {
-    watch: src + '/img/**/*',
-    src: src + '/img/*',
+    watch: src + '/images/**/*',
+    src: src + '/images/*',
     dest: dev + '/i'
   },
+
   devJade: {
     watch: src + '/**/*.jade',
-    src: src + '/*.jade',
+    src: src + '/bundles/*.jade',
     dest: dev
-  },
-  devBrowsersync: {
+  },  devBrowsersync: {
     dest: dev
   }
 };
