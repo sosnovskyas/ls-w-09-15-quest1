@@ -26,7 +26,7 @@
   }
 }
 
-.tooltip__right, .tooltip__left {
+.tooltip_right, .tooltip_left {
   padding: 0 5px;
 
   .tooltip__inner{
@@ -37,7 +37,7 @@
   }
 }
 
-.tooltip__top, .tooltip__bottom{
+.tooltip_top, .tooltip_bottom{
   padding: 5px 0;
   .tooltip__inner{
     &:after{
