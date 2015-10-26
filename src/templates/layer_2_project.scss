@@ -8,13 +8,8 @@
   background-position: 6px -120px;
 }
 
-
-
-
-
 @import '../fonts/fira/fira.css';
 @import '../fonts/proxima-nova-semidbold/ProximaNovaCond-Semibold.css';
-
 
 @import '../blocks/header/header';
 @import '../blocks/adress-bar/adress-bar';
@@ -31,8 +26,6 @@
   background: #3a7b8b; /* Старые браузеры */
   background: radial-gradient(circle at 80px 40px, #e7eff3, #3a7b8b, #e7eff3);
 }
-
-
 
 .wrapper {
 
@@ -86,8 +79,6 @@
 
 // TODO причесать эти стили и разместить их где следует
 
-
-
 .clear-button{
   margin-left: 119px;
 }
@@ -96,7 +87,6 @@
   margin-top: -5px;
   margin-bottom: 0;
 }
-
 
 // index
 .content {
@@ -299,7 +289,6 @@
 
         &__description {
 
-
           @include set_font("fira_sanslight_italic", 15, #000);
           text-align: center;
           width: 180px;
@@ -485,3 +474,7 @@
   }
 }
 
+.error{
+  border-color: #FF3232;
+  background-color: #ffc8c8;
+}
