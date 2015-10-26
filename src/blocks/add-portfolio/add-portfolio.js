@@ -14,14 +14,35 @@
       $('.add-portfolio_form').bPopup();
     });
 
-    // ВАЛИДАЦИЯ
+    // VALIDATION
     $('#add-portfolio').on('submit', function(e) {
       e.preventDefault();
+
+      var box = $('.file-upload');
+      var content = $('#upload');
+      var notEmptyField = !!content.val();
+
+      if (notEmptyField) {
+        box.removeClass('error');
+      } else {
+        box.addClass('error');
+        box.qtip(
+          {
+            content: 'A simple tooltip for the link',
+            style: {name: 'dark', tip: 'topLeft'}
+          });
+      }
+      // editing .error clean
+      box.on('change', function(e) {
+        box.removeClass('error');
+      });
+
       validateThis($(this));
     });
   });
 })(jQuery);
 
+// FILE UPLOAD (input)
 function getName(str) {
   if (str.lastIndexOf('\\')) {
     var i = str.lastIndexOf('\\') + 1;
