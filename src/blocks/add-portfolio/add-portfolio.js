@@ -13,6 +13,12 @@
       // Triggering bPopup when click event is fired
       $('.add-portfolio_form').bPopup();
     });
+
+    // ВАЛИДАЦИЯ
+    $('#add-portfolio').on('submit', function(e) {
+      e.preventDefault();
+      validateThis($(this));
+    });
   });
 })(jQuery);
 
