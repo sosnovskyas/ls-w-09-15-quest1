@@ -6,6 +6,7 @@
     $(
       $('#login-form').on('submit', function(e) {
         e.preventDefault();
+
         validateThis($(this));
       })
     );
