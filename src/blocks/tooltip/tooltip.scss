@@ -1,12 +1,13 @@
 .tooltip{
   position: absolute;
   display: inline-block;
+  z-index: 999999;
 }
 
 .tooltip__inner{
   max-width: 200px;
   padding: 3px 8px;
-  color: #fff;
+  color: #000;
   text-align: center;
   text-decoration: none;
   background-color: #000000;
