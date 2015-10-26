@@ -67,7 +67,8 @@ module.exports = {
 
   devCssVendor: {
     src: [
-          './bower_components/normalize-css/normalize.css'
+          './bower_components/normalize-css/normalize.css',
+          './bower_components/qtip2/basic/jquery.qtip.css'
         ],
     dest: dev,
     concatFile: 'vendor.css',
@@ -85,13 +86,15 @@ module.exports = {
   devJsCustom: {
     src: src + jsFileList,
     concatFile: 'custom.js',
+    watch: src + '/**/*.js',
     dest: dev
   },
   devJsVendor: {
     src: [
       './bower_components/jquery/dist/jquery.js',
       './bower_components/jquery-placeholder/jquery.placeholder.js',
-      './bower_components/bPopup/jquery.bpopup.js'
+      './bower_components/bPopup/jquery.bpopup.js',
+      './bower_components/qtip2/basic/jquery.qtip.js'
     ],
     concatFile: 'vendor.js',
     dest: dev
