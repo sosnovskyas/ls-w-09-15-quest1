@@ -2,16 +2,16 @@
   .box_header1.add-portfolio_form-header
     .add-portfolio_form-close: a(href="#").b-close +
     .box_header1-text Добавление проекта
-  form(action="#").add-portfolio_form-box
+  form()#add-portfolio.add-portfolio_form-box
     label.label Название проекта
-    input(type="text", placeholder="Введите название").input.input__normal
+    input(type="text", placeholder="Введите название", data-validation="text").input.input__normal
     label.label Картинка проекта
     label.file-upload.box.add-portfolio_form-upload
       span.button Выбрать
       #fileformlabel.upload-label Загрузите изображение
-      input(type="file", name="upload" placeholder="Загрузите изображение", onchange="getName(this.value);")#upload.input.input__normal
+      input(type="file", name="upload" placeholder="Загрузите изображение", onchange="getName(this.value);", data-validation="text")#upload.input.input__normal
     label.label URL проекта
-    input(type="text", placeholder="Добавьте ссылку").input.input__normal
+    input(type="text", placeholder="Добавьте ссылку", data-validation="text").input.input__normal
     label.label Описание
-    textarea.textarea.textarea__normal
+    textarea(data-validation="text").textarea.textarea__normal
     input(type="submit", value="Добавить").button.button__light.button__normal.add-portfolio_form-submit
