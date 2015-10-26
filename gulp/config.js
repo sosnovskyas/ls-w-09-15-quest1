@@ -14,6 +14,7 @@ module.exports = {
     ],
     sequenceBuild: [
       'dev-jade',
+      'dev-css-vendor',
       'dev-js-direct',
       'dev-js-vendor',
       'dev-js-custom',
