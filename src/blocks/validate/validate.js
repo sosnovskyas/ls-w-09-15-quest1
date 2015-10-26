@@ -14,7 +14,6 @@ function validateThis(form) {
           content: 'A simple tooltip for the link',
           style: {name: 'dark', tip: 'topLeft'}
         });
-      console.log('qwe');
     }
   });
 
