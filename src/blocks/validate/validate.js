@@ -9,10 +9,12 @@ function validateThis(form) {
       $this.removeClass('error');
     } else {
       $this.addClass('error');
-      $this.tooltip({
-        content: 'заполните поле',
-        position: 'top'
-      });
+      $this.qtip(
+        {
+          content: 'A simple tooltip for the link',
+          style: {name: 'dark', tip: 'topLeft'}
+        });
+      console.log('qwe');
     }
   });
 
@@ -24,7 +26,7 @@ function validateThis(form) {
       $this.removeClass('error');
     } else {
       $this.addClass('error');
-      $this.tooltip({
+      $this.qtip({
         content: 'введите валидную почту',
         position: 'bottom'
       });
@@ -34,3 +36,8 @@ function validateThis(form) {
 
   return !(form.find('.error').length);
 }
+
+// очистка ошибки при вводе
+$('.input, .textarea').on('keyup', function(e) {
+  $(this).removeClass('error');
+});
