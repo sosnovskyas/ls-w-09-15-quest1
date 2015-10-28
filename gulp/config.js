@@ -95,6 +95,7 @@ module.exports = {
       './bower_components/jquery/dist/jquery.js',
       './bower_components/jquery-placeholder/jquery.placeholder.js',
       './bower_components/bPopup/jquery.bpopup.js',
+      './bower_components/jquery-validation/dist/jquery.validate.js',
       './bower_components/qtip2/basic/jquery.qtip.js'
     ],
     concatFile: 'vendor.js',

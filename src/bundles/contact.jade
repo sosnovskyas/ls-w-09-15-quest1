@@ -9,20 +9,4 @@ block content
       .content_item-header.content_item-header__contact
         .content_item-header-text.content_item-header-text__contact У вас интересный проект? Напишите мне
       .content_item__contact-box
-        form(action="javascript:alert(grecaptcha.getResponse(widgetId1));").clearfix
-          .content_form__box
-            label.content_form__box__label.content_form__box__label_name Имя
-            input(placeholder="Как к Вам обращаться").input.input__normal
-          .content_form__box
-            label.content_form__box__label.content_form__box__label_email Email
-            input(placeholder="Куда мне писать").input.input__normal
-          .content_form__box
-            label.content_form__box__label.message_label Сообщение
-            textarea(placeholder="Кратко в чём суть").textarea.textarea__normal
-          .content_form__box.clearfix
-            label.content_form__box__label.message_label Введите код указаный на картинке
-            img(src="i/captcha.png", alt="captcha").content_form__box__captcha.content_form__box__input
-            input(placeholder="введите код").content_form__box__input.content_form__box__captcha_input
-          .content_form__box.clearfix
-            input(type="submit", value="Отправить").button.button__light.button__normal
-            input(type="reset", value="Очистить").button.button__dark.button__normal.clear-button
+        include ../blocks/feedback/feedback

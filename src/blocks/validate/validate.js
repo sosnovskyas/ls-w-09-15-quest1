@@ -1,7 +1,10 @@
 function validateThis(form) {
   var textType = form.find('[data-validation=\'text\']');
   var mailType = form.find('[data-validation=\'mail\']');
-  textType.each(function() {
+  var loginType = form.find('[data-validation=\'login\']');
+  var passwordType = form.find('[data-validation=\'password\']');
+
+  loginType.each(function() {
     var $this = $(this);
     var notEmptyField = !!$this.val();
 
@@ -11,9 +14,40 @@ function validateThis(form) {
       $this.addClass('error');
       $this.qtip(
         {
-          content: 'A simple tooltip for the link',
-          style: {name: 'dark', tip: 'topLeft'}
+          content: {
+            text: 'введите логин'
+          },
+          style: {classes: 'error'},
+          show: {
+            target: $('.error')
+          }
         });
+    }
+  });
+  passwordType.each(function() {
+    var $this = $(this);
+    var notEmptyField = !!$this.val();
+
+    if (notEmptyField) {
+      $this.removeClass('error');
+    } else {
+      $this.addClass('error');
+      $this.qtip(
+        {
+          content: 'введите парроль',
+          style: {tip: 'Left'}
+        });
+    }
+  });
+
+  textType.each(function() {
+    var $this = $(this);
+    var notEmptyField = !!$this.val();
+
+    if (notEmptyField) {
+      $this.removeClass('error');
+    } else {
+      $this.addClass('error');
     }
   });
 
@@ -35,8 +69,8 @@ function validateThis(form) {
 
   return !(form.find('.error').length);
 }
-
-// очистка ошибки при вводе
-$('.input, .textarea').on('keyup', function(e) {
-  $(this).removeClass('error');
-});
+//
+//// очистка ошибки при вводе
+//$('.input, .textarea').on('keyup', function(e) {
+//  $(this).removeClass('error');
+//});

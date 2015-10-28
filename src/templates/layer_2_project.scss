@@ -478,3 +478,26 @@
   border-color: #FF3232;
   background-color: #ffc8c8;
 }
+.qtip {
+  .error{
+    //border-color: #f97e76;
+    //background-color: #f97e76;
+    //color: #fff;
+  }
+  //border-color: #f97e76;
+  //background-color: #f97e76;
+  //@include border-radius(3px);
+}
+.my-qtip-class{
+  border-color: #f97e76;
+  background-color: #f97e76;
+  .error{
+    border-color: #f97e76;
+    background-color: #f97e76;
+    color: #fff;
+  }
+}
+
+.qtip-rounded{
+  @include border-radius(3px);
+}
