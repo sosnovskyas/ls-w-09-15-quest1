@@ -1,17 +1,17 @@
 form.feedback.clearfix
    .content_form__box
       label.content_form__box__label.content_form__box__label_name Имя
-      input(name="name", type="text", placeholder="Как к Вам обращаться").input.input__normal
+      input(name="feedbackName", type="text", placeholder="Как к Вам обращаться").input.input__normal
    .content_form__box.qtip-right
       label.content_form__box__label.content_form__box__label_email Email
-      input(name="mail", type="email", placeholder="Куда мне писать").input.input__normal
+      input(name="feedbackMail", type="email", placeholder="Куда мне писать").input.input__normal
    .content_form__box
       label.content_form__box__label.message_label Сообщение
-      textarea(name="caption", type="text",placeholder="Кратко в чём суть").textarea.textarea__normal
+      textarea(name="feedbackCaption", type="text",placeholder="Кратко в чём суть").textarea.textarea__normal
    .content_form__box.clearfix.qtip-right
       label.content_form__box__label.message_label Введите код указаный на картинке
       img(src="i/captcha.png", alt="captcha").content_form__box__captcha.content_form__box__input
-      input(name="captcha", type="text",placeholder="введите код").content_form__box__input.content_form__box__captcha_input
+      input(name="feedbackCaptcha", type="text",placeholder="введите код").content_form__box__input.content_form__box__captcha_input
    .content_form__box.clearfix
       input(type="submit", value="Отправить").button.button__light.button__normal
       input(type="reset", value="Очистить").button.button__dark.button__normal.clear-button

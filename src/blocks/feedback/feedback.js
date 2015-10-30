@@ -3,23 +3,28 @@
   $(function() {
     $('[type=reset]').on('click', function() {
       $('.error').removeClass('error');
-      $('input[type=text], textarea').val('');
+      $('[name=feedbackName], ' +
+        '[name=feedbackCaption], ' +
+        '[name=feedbackCaptcha], ' +
+        '[name=feedbackMail], ' +
+        'textarea').val('');
       $('.qtip').qtip('destroy');
+      $('.feedback').find('.valid').qtip('destroy');
     });
 
     // VALIDATE-TOOLTIP
     $('.feedback').validate({
       rules: {
-        name: 'required',
-        caption: 'required',
-        captcha: 'required',
-        mail: 'required'
+        feedbackName: 'required',
+        feedbackCaption: 'required',
+        feedbackCaptcha: 'required',
+        feedbackMail: 'required'
       },
       messages: {
-        name: 'введите имя',
-        caption: 'введите отписание',
-        captcha: 'введите captcha',
-        mail: 'введите email'
+        feedbackName: 'введите имя',
+        feedbackCaption: 'введите отписание',
+        feedbackCaptcha: 'введите captcha',
+        feedbackMail: 'введите email'
       },
       success: function() {
         setTimeout(function() {
