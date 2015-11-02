@@ -12,7 +12,7 @@
         modalClose: true,
         onClose: function() {
           $('.error').removeClass('error');
-          $('input[type=text], input[type=url], textarea').val('');
+          $('[name=name], [name=upload], [name=caption], textarea').val('');
           $('.qtip').qtip('destroy');
         }
       });

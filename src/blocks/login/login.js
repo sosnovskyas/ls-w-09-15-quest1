@@ -13,7 +13,7 @@
         modalClose: true,
         onClose: function() {
           $('.error').removeClass('error');
-          $('input, textarea').val('');
+          $('[name=login], [name=password], textarea').val('');
           $('.qtip').qtip('destroy');
         }
       });

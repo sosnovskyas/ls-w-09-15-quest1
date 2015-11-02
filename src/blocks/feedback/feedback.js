@@ -7,9 +7,9 @@
         '[name=feedbackCaption], ' +
         '[name=feedbackCaptcha], ' +
         '[name=feedbackMail], ' +
-        'textarea').val('');
-      $('.qtip').qtip('destroy');
-      $('.feedback').find('.valid').qtip('destroy');
+        'textarea')
+        .val('')
+        .qtip('destroy');
     });
 
     // VALIDATE-TOOLTIP
@@ -26,6 +26,12 @@
         feedbackCaptcha: 'введите captcha',
         feedbackMail: 'введите email'
       },
+      events: {
+        render: function(event, api) {
+          // Grab the BGIFrame element
+          var elem = api.elements.bgiframe;
+        }
+      },
       success: function() {
         setTimeout(function() {
           $('.feedback').find('.valid').qtip('destroy');
@@ -39,6 +45,8 @@
         var elem = $(element);
         var corners = ['left center', 'right center'];
         var flipIt = elem.parents('.qtip-right').length > 0;
+
+        $.fn.qtip.zindex = 20;
 
         $(element).filter(':not(.valid)').qtip({ // Apply the tooltip only if it isn't valid
           content: error,
